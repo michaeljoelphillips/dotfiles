@@ -1,0 +1,190 @@
+global !p
+
+#######################
+## Snippet Functions ##
+#######################
+def createDocblockPlaceholders(snip):
+    # Get the number of placeholders to add to the Anonymous Snippet.
+    amount = int(snip.buffer[snip.line].strip())
+
+    # Clear the current line, but maintain the whitespace.
+    snip.buffer[snip.line] = re.sub(re.compile(r'\d'), '', snip.buffer[snip.line])
+
+    # Create the Anonymous Snippet.
+    snippet = "/**\n"
+    for i in range(amount):
+        # Concatentate "* @" with the placeholder number.
+        snippet += " * @$%d\n" % (i+1)
+
+    # End the Docblock.
+    snippet += " */"
+
+    # Execute the snippet.
+    snip.expand_anon(snippet)
+endglobal
+
+##########################
+## Snippet Declarations ##
+##########################
+
+snippet class "Class Declaration" b
+<?php
+
+namespace ${2:`!p
+relpath = os.path.relpath(path)
+classname = re.search(r'[A-Z].+(?=/)', relpath)
+if classname:
+    snip.rv = classname.group().replace('/', '\\')
+else:
+    snip.rv = 'App'
+`};
+
+/**
+ * @author `!v g:snips_author`
+ */
+class ${1:`!p snip.rv = snip.basename`}
+{$0
+}
+endsnippet
+
+snippet interface "Interface Declaration" b
+<?php
+
+namespace ${2:`!p
+relpath = os.path.relpath(path)
+classname = re.search(r'[A-Z].+(?=/)', relpath)
+if classname:
+    snip.rv = classname.group().replace('/', '\\')
+else:
+    snip.rv = 'App'
+`};
+
+/**
+ * @author `!v g:snips_author`
+ */
+interface ${1:`!p snip.rv = snip.basename`}
+{
+}
+endsnippet
+
+snippet test "PHPUnit Test Declaration" b
+<?php
+
+namespace ${2:`!p
+relpath = os.path.relpath(path)
+classname = re.search(r'[A-Z].+(?=/)', relpath)
+if classname:
+    snip.rv = 'Test\\' + classname.group().replace('/', '\\')
+else:
+    snip.rv = 'Test'
+`};
+
+use PHPUnit\Framework\TestCase;
+
+/**
+ * @author `!v g:snips_author`
+ */
+class ${1:`!p snip.rv = snip.basename`} extends TestCase
+{$0
+}
+endsnippet
+
+snippet cm "PHPUnit Create Mock"
+$this->createMock($0);
+endsnippet
+
+# Methods
+snippet pubf "Public Function" b
+public function $1($2)
+{
+    $3
+}
+endsnippet
+
+snippet prof "Protected Function" b
+protected function $1($2)
+{
+    $3
+}
+endsnippet
+
+snippet prif "Private Function" b
+private function $1($2)
+{
+    $3
+}
+endsnippet
+
+# Properties
+snippet pubp "Public Property" b
+/** @var $2 */
+public $$1;
+endsnippet
+
+snippet prop "Protected Property" b
+/** @var $2 */
+protected $$1;
+endsnippet
+
+snippet prip "Private Property" b
+/** @var $2 */
+protected $$1;
+endsnippet
+
+# Docblocks
+snippet doc "Simple Dockblock"
+/**
+ * $0
+ */
+endsnippet
+
+post_jump "createDocblockPlaceholders(snip)"
+snippet "doc(\d+)" "Dynamic Docblock" br
+`!p snip.rv = match.group(1)`
+endsnippet
+
+snippet ldoc "One Line Docblock"
+/** $0 */
+endsnippet
+
+snippet vdoc "Variable Docblock"
+/** @var $0 */
+endsnippet
+
+snippet fdoc "Function Docblock"
+/**
+ * @return $0
+ */
+endsnippet
+
+snippet inh "Inherit Docblock"
+/**
+ * {@inheritdoc}
+ */
+endsnippet
+
+# Experimental
+snippet $te "Property Accessor"
+$this->${1:${VISUAL}} = $`!p snip.rv = t[1]`;
+endsnippet
+
+snippet gs "Class Getter and Setter" bs
+/**
+ * @param `!p snip.rv = t[2]` $`!p snip.rv = t[1]`
+ * @return $this
+ */
+public function set`!p snip.rv = re.sub('([a-zA-Z])', lambda x: x.groups()[0].upper(), t[1], 1)`($2 $${1:${VISUAL}}) : `!p snip.rv = snip.basename`
+{
+    $this->`!p snip.rv = t[1]` = $`!p snip.rv = t[1]`;
+
+    return $this;
+}
+
+/**
+ * @return `!p snip.rv = t[2]`
+ */
+public function get`!p snip.rv = re.sub('([a-zA-Z])', lambda x: x.groups()[0].upper(), t[1], 1)`() : ?`!p snip.rv = t[2]`
+{
+    return $this->`!p snip.rv = t[1]`;
+}
+endsnippet
