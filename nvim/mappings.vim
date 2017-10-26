@@ -1,4 +1,4 @@
-" Movement
+" " Movement
 let mapleader = ','
 inoremap jj <ESC>
 inoremap JJ <ESC>
@@ -29,9 +29,6 @@ nmap <leader>hl :let @/ = ""<CR>
 " Insert Use Statements
 autocmd User Composer nmap <buffer> <LocalLeader>f <Plug>(composer-find) |
                     \ nmap <buffer> <LocalLeader>u <Plug>(composer-use)
-
-" Start DBExt
-nnoremap <leader>db :DBPromptForBufferParameters<CR>
 
 " Dash Docs
 nmap <leader>K <Plug>DashSearch<CR>
