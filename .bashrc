@@ -18,8 +18,7 @@ source /usr/local/etc/bash_completion.d/pass
 alias ll='ls -aFGl'
 alias ls='ls -G'
 alias bd=". bd -si"
-# alias vim="/usr/local/Cellar/vim/7.4.1967/bin/vim"
-alias vim="/usr/local/bin/vim"
+alias vim="/usr/local/bin/nvim"
 alias todo="vim ~/.todo"
 alias muxstart="~/.bin/tmux/session_start.sh"
 alias muxmain="tmux -CC attach -t main"
