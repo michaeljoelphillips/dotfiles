@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>Das Keyboard Media Key Fix</name>
+    <identifier>dk4_media</identifier>
+    <autogen>
+      __KeyToKey__
+     ConsumerKeyCode::RawValue::0x0012, ModifierFlag::NONE, KeyCode::RawValue::0x0062
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      ConsumerKeyCode::RawValue::0x0011, ModifierFlag::NONE, KeyCode::RawValue::0x0065
+    </autogen>
+  </item>
+</root>
