@@ -15,7 +15,7 @@ let g:deoplete#enable_at_startup = 1
 let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
 let g:deoplete#ignore_sources.php = ['omni']
 " Close the preview window after completion.
-" autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+autocmd InsertLeave * if pumvisible() == 0 | pclose | endif
 
 " Netrw Configuration
 let g:netrw_liststyle = 3
@@ -32,3 +32,6 @@ let g:dbext_default_profile_docker = 'type=MYSQL:user=root:passwd=root:dbname=db
 
 " GutenTags
 let g:gutentags_ctags_exclude = ['*.phar', 'cache', 'legacy', '__CG__*', 'node_modules', 'web', '*.js', '*.sql']
+
+" Test.vim
+let test#strategy = "basic"

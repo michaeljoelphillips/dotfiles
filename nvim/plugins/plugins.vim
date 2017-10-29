@@ -7,6 +7,7 @@ Plug 'joonty/vdebug', { 'for': 'php' }
 Plug 'SirVer/ultisnips'
 Plug 'vim-scripts/dbext.vim'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'janko-m/vim-test'
 
 " PHP Plugins
 Plug 'nelsyeung/twig.vim', { 'for': 'php' }
@@ -33,5 +34,13 @@ Plug 'mhartington/oceanic-next'
 Plug 'joshdick/onedark.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'jacoborus/tender'
+
+" NVim Frontend Plugins
+Plug 'dzhou121/gonvim-fuzzy'
+
+" Writing Plugins
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/vim-journal'
+Plug 'junegunn/vim-peekaboo'
 
 call plug#end()

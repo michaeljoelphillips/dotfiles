@@ -1,4 +1,4 @@
-" " Movement
+" Movement
 let mapleader = ','
 inoremap jj <ESC>
 inoremap JJ <ESC>
@@ -16,6 +16,17 @@ nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gp :Gpush<CR>
 nnoremap <leader>gv :Gvsplit<CR>
+
+" Test Aliases
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+
+" FZF Aliases
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>b :Buffers<CR>
 
 " Format JSON
 nnoremap <leader>jf :%!python -m json.tool<CR>
