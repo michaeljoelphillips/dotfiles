@@ -38,8 +38,9 @@ nnoremap <leader>vS :call SetupVdebugPaths()<CR>
 nmap <leader>hl :let @/ = ""<CR>
 
 " Insert Use Statements
-autocmd User Composer nmap <buffer> <LocalLeader>f <Plug>(composer-find) |
-                    \ nmap <buffer> <LocalLeader>u <Plug>(composer-use)
+" autocmd User Composer nmap <buffer> <leader>u <Plug>(composer-use)
+autocmd FileType php noremap <Leader>U :call PhpExpandClass()<CR>
+autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
 
 " Dash Docs
 nmap <leader>K <Plug>DashSearch<CR>

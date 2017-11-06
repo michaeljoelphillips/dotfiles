@@ -21,7 +21,7 @@ autocmd InsertLeave * if pumvisible() == 0 | pclose | endif
 let g:netrw_liststyle = 3
 
 " UltiSnips
-let g:snips_author = 'Michael Phillips <michaeljoelphillips@gmail.com>'
+let g:snips_author = 'Michael Phillips <michael.phillips@realpage.com>'
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<c-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
@@ -35,3 +35,17 @@ let g:gutentags_ctags_exclude = ['*.phar', 'cache', 'legacy', '__CG__*', 'node_m
 
 " Test.vim
 let test#strategy = "basic"
+
+" Github Dashboard
+let g:github_dashboard = { 'username': 'nomad145', 'password': $GITHUB_TOKEN }
+
+" Vim PHP Namespaces
+function! IPhpExpandClass()
+    call PhpExpandClass()
+    call feedkeys('a', 'n')
+endfunction
+
+function! IPhpInsertUse()
+    call PhpInsertUse()
+    " call feedkeys('a', 'n')
+endfunction

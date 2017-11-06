@@ -13,6 +13,7 @@ Plug 'janko-m/vim-test'
 Plug 'nelsyeung/twig.vim', { 'for': 'php' }
 Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 Plug 'noahfrederick/vim-composer', { 'for': 'php' }
+Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
 " Plug 'swekaj/php-foldexpr.vim', { 'for': 'php' }
 Plug 'vim-php/tagbar-phpctags.vim', { 'for': 'php' }
 
@@ -28,15 +29,16 @@ Plug 'tpope/vim-unimpaired'
 Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-vinegar'
+Plug 'junegunn/vim-github-dashboard'
 
 " Color Schemes
 Plug 'mhartington/oceanic-next'
-Plug 'joshdick/onedark.vim'
-Plug 'flazz/vim-colorschemes'
-Plug 'jacoborus/tender'
+" Plug 'joshdick/onedark.vim'
+" Plug 'flazz/vim-colorschemes'
+" Plug 'jacoborus/tender'
 
 " NVim Frontend Plugins
-Plug 'dzhou121/gonvim-fuzzy'
+" Plug 'dzhou121/gonvim-fuzzy'
 
 " Writing Plugins
 Plug 'junegunn/goyo.vim'
