@@ -1,24 +1,27 @@
 # PSI
-export PS1="\h:\w \u\\$\[$(tput sgr0)\]\$(__git_ps1) "
+# export PS1="\h:\w \u\\$\[$(tput sgr0)\]\$(__git_ps1) "
+export PS1="\h:\w \u\\$\[$(tput sgr0)\] "
 
 # Path Additions
 export PATH="/usr/local/sbin:$PATH"
 
 # Sources
-source ~/.bash_includes/bash_completion
-source ~/.bash_includes/git-prompt.sh
-source ~/.bash_includes/iterm2-integration.bash
-source ~/.bash_includes/git-completion.bash
-source ~/.bash_includes/bd-completion.bash
-source ~/.bash_includes/tmuxinator.bash
-source ~/.bash_includes/t-completion.sh
-source /usr/local/etc/bash_completion.d/pass
+# source ~/.bash_includes/bash_completion
+# source /usr/local/opt/bash-git-prompt/share/gitprompt.sh
+# source ~/.bash_includes/git-prompt.sh
+# source ~/.bash_includes/iterm2-integration.bash
+# source ~/.bash_includes/git-completion.bash
+# source ~/.bash_includes/bd-completion.bash
+# source ~/.bash_includes/tmuxinator.bash
+# source ~/.bash_includes/t-completion.sh
+# source /usr/local/etc/bash_completion.d/pass
 
 # Aliases
 alias ll='ls -aFGl'
 alias ls='ls -G'
 alias bd=". bd -si"
 alias vim="/usr/local/bin/nvim"
+alias vi="/usr/local/bin/nvim"
 alias todo="vim ~/.todo"
 alias muxstart="~/.bin/tmux/session_start.sh"
 alias muxmain="tmux -CC attach -t main"
@@ -39,6 +42,7 @@ export EDITOR="vim"
 export PASSWORD_STORE_CLIP_TIME=15
 export COMPOSE_HTTP_TIMEOUT=120
 export LYNX_CFG_PATH="/Users/nomad/.config"
+export GITHUB_TOKEN="22b8114f9c6e4aab8ab65fbf1863bb064990f681"
 
 # GPG-Agent
 GPG_TTY=$(tty)
