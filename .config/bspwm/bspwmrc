@@ -8,8 +8,8 @@ bspc config focus_follows_pointer false
 bspc monitor -d Chat Web Code Games
 
 # Border Colors
-bspc config focused_border_color #5860A9
-bspc config normal_border_color #00000
+bspc config focused_border_color '#5860A9'
+bspc config normal_border_color '#00000'
 
 # Window Gap Configuration
 bspc config top_padding 50
