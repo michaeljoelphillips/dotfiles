@@ -51,3 +51,7 @@ ctrl + super + l
 # Suspend Desktop
 shift + Pause
 	systemctl suspend
+
+# Open Terminal
+alt + t
+	urxvt
