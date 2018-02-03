@@ -16,6 +16,10 @@ Plug 'noahfrederick/vim-composer', { 'for': 'php' }
 " Plug 'swekaj/php-foldexpr.vim', { 'for': 'php' }
 Plug 'vim-php/tagbar-phpctags.vim', { 'for': 'php' }
 
+" Java Plugins
+Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
+Plug 'mikelue/vim-maven-plugin', { 'for': 'java' }
+
 " Movement/Misc Plugins
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
