@@ -2,6 +2,7 @@
 set list
 set relativenumber
 set nowrap
+set ignorecase
 
 " Colorscheme
 syntax on
@@ -13,3 +14,6 @@ colorscheme OceanicNext
 autocmd FileType todo setlocal spell
 autocmd FileType text setlocal spell
 autocmd FileType mail setlocal spell
+
+" Fix Line Joins
+set formatoptions+=j
