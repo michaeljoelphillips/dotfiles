@@ -47,7 +47,8 @@ autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
 nmap <leader>K <Plug>DashSearch<CR>
 
 " TagBar Toggle
-nnoremap <leader>] :TagbarToggle<CR>
+nnoremap <leader>] :TagbarOpen j<CR>
+nnoremap <leader>[ :TagbarClose<CR>
 
 " Deoplete Tab Completion
 " inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"

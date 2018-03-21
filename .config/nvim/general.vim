@@ -17,3 +17,6 @@ autocmd FileType mail setlocal spell
 
 " Fix Line Joins
 set formatoptions+=j
+
+" NetRW Buffer Fix
+autocmd FileType netrw setl bufhidden=delete

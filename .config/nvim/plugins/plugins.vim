@@ -16,6 +16,7 @@ Plug 'noahfrederick/vim-composer', { 'for': 'php' }
 Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
 " Plug 'swekaj/php-foldexpr.vim', { 'for': 'php' }
 Plug 'vim-php/tagbar-phpctags.vim', { 'for': 'php' }
+Plug 'jwalton512/vim-blade'
 
 " Java Plugins
 Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
@@ -30,6 +31,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-jdaddy'
 Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-vinegar'
