@@ -1,0 +1,57 @@
+# Node Focus
+alt + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# Switch Desktop
+alt + bracket{right,left}
+	bspc desktop -f {next,prev}.local
+
+# Focus Last Node
+alt + {grave,Tab}
+	bspc {node,desktop -f last
+
+# Focus or Send To Desktop
+alt + {_,shift +}{1-4}
+	bspc {desktop -f,node -d} '^{1-4}'
+
+# Preselect Node
+ctrl + alt + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# Resize Node Inward
+super + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# Resize Node Outward
+super + shift + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# Show Menu
+alt + space
+	rofi -show combi
+
+# Show Pass
+alt + p
+	passmenu
+
+# Mopidy Controls
+shift + F6
+	mpc toggle
+
+shift + F5
+	mpc prev
+
+shift + F7
+	mpc next
+
+# Lock Desktop
+ctrl + super + l
+	light-locker-command -l
+
+# Suspend Desktop
+shift + Pause
+	systemctl suspend
+
+# Open Terminal
+alt + t
+	urxvt

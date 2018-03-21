@@ -1,0 +1,26 @@
+#
+# ~/.bashrc
+#
+
+source /usr/share/git/completion/git-prompt.sh
+source /usr/share/git/completion/git-completion.bash
+source /usr/share/pass/completion/pass.bash-completion
+
+PS1='\u@\h \W$(__git_ps1 " (%s)") '
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Aliases
+alias ls='ls --color=auto'
+alias ll='ls -aFl --color=auto'
+alias borderlands="LD_LIBRARY_PATH=~/.steam/bin32/ cd ~/.steam/steam/steamapps/common/Borderlands\ 2 && ~/.steam/bin32/steam-runtime/run.sh ./Borderlands2"
+alias jediacademysp="~/.steam/steam/steamapps/common/Jedi\ Academy/GameData/openjk_sp.x86_64"
+alias jediacademymp="~/.steam/steam/steamapps/common/Jedi\ Academy/GameData/openjk.x86_64"
+alias dict="sdcv"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Infrequent Commands
+# gpick - On-screen color picker
+# dict - Dictionary
