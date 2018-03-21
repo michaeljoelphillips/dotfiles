@@ -3,7 +3,7 @@ call plug#begin('~/.vim/plugged')
 " IDE-Like Plugins
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'w0rp/ale'
-Plug 'joonty/vdebug', { 'for': 'php' }
+Plug 'joonty/vdebug' ", { 'for': 'php' }
 Plug 'SirVer/ultisnips'
 Plug 'vim-scripts/dbext.vim'
 Plug 'ludovicchabant/vim-gutentags'
@@ -36,6 +36,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-vinegar'
 Plug 'junegunn/vim-github-dashboard'
+Plug 'rizzatti/dash.vim'
 
 " Color Schemes
 Plug 'mhartington/oceanic-next'

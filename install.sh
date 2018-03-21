@@ -2,10 +2,8 @@
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-mkdir ~/Code/
 cd ~/Code/
 
-git clone https://github.com/nomad145/dotfiles
 git clone https://github.com/nomad145/snippets
 
 mkdir ~/.config
