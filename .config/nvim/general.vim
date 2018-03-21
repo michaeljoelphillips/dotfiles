@@ -27,3 +27,6 @@ set formatoptions+=j
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_save = 1
+
+" NetRW Buffer Fix
+autocmd FileType netrw setl bufhidden=delete

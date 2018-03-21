@@ -1,6 +1,6 @@
 " VDebug Configuration
 function! SetupVdebugPaths()
-    let g:vdebug_options["path_maps"] = g:host_app_path
+    let g:vdebug_options["path_maps"] = {'/var/www/html': '/Users/mphillips2/Code/omnichannel'}
     " let g:vdebug_options["path_maps"] = {'/app/': '/Users/nomad/Code/linode-alpha-api/'}
     let g:vdebug_options["watch_window_style"] = 'compact'
 endfunction
@@ -21,17 +21,39 @@ autocmd InsertLeave * if pumvisible() == 0 | pclose | endif
 let g:netrw_liststyle = 3
 
 " UltiSnips
-let g:snips_author = 'Michael Phillips <michaeljoelphillips@gmail.com>'
+let g:snips_author = 'Michael Phillips <michael.phillips@realpage.com>'
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<c-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 let g:UltiSnipsEditSplit = "vertical"
 
 " DBExt
-let g:dbext_default_profile_docker = 'type=MYSQL:user=root:passwd=root:dbname=dbname:host=127.0.0.1'
+let g:dbext_default_profile_docker = 'type=PGSQL:user=service_user:dbname=service_db:host=127.0.0.1'
 
 " GutenTags
 let g:gutentags_ctags_exclude = ['*.phar', 'cache', 'legacy', '__CG__*', 'node_modules', 'web', '*.js', '*.sql']
 
 " Test.vim
 let test#strategy = "basic"
+
+function! DockerTransform(cmd) abort
+    return 'docker-compose exec fpm php ' . a:cmd
+endfunction
+
+let g:test#custom_transformations = {'docker': function('DockerTransform')}
+let g:test#transformation = 'docker'
+
+" Github Dashboard
+let g:github_dashboard = { 'username': 'nomad145', 'password': $GITHUB_TOKEN }
+
+" Vim PHP Namespaces
+function! IPhpExpandClass()
+    call PhpExpandClass()
+    call feedkeys('a', 'n')
+endfunction
+
+function! IPhpInsertUse()
+    call PhpInsertUse()
+    " call feedkeys('a', 'n')
+endfunction
+
