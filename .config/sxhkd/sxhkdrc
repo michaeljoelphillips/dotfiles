@@ -3,7 +3,7 @@ alt + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # Switch Desktop
-alt + bracket{right,left}
+ctrl + alt + {l,h}
 	bspc desktop -f {next,prev}.local
 
 # Focus Last Node
@@ -15,7 +15,7 @@ alt + {_,shift +}{1-4}
 	bspc {desktop -f,node -d} '^{1-4}'
 
 # Preselect Node
-ctrl + alt + {h,j,k,l}
+ctrl + super + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
 # Resize Node Inward
@@ -25,6 +25,18 @@ super + {h,j,k,l}
 # Resize Node Outward
 super + shift + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# Float a Node
+alt + {f,shift + f}
+	bspc node -t {floating,tiled}
+
+# Make a window node sticky
+alt + s
+	bspc node -g sticky
+
+# Move a Floating Node
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # Show Menu
 alt + space
@@ -45,7 +57,7 @@ shift + F7
 	mpc next
 
 # Lock Desktop
-ctrl + super + l
+ctrl + super + z
 	light-locker-command -l
 
 # Suspend Desktop
@@ -55,3 +67,6 @@ shift + Pause
 # Open Terminal
 alt + t
 	urxvt
+
+alt + shift + 5
+	scrot -s -e mv $f '/home/nomad/Pictures/Screenshots/'

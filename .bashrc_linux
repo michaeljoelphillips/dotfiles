@@ -20,7 +20,10 @@ alias jediacademymp="~/.steam/steam/steamapps/common/Jedi\ Academy/GameData/open
 alias dict="sdcv"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export DEVKITPRO=/opt/devkitpro
 
 # Infrequent Commands
 # gpick - On-screen color picker
 # dict - Dictionary
+# xrdb -merge ~/.Xresources - Update .Xresources
+# peek - Gif screen grab

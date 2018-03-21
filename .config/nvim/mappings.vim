@@ -27,6 +27,7 @@ nmap <silent> <leader>g :TestVisit<CR>
 " FZF Aliases
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>w :Windows<CR>
 
 " Format JSON
 nnoremap <leader>jf :%!python -m json.tool<CR>

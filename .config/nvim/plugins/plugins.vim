@@ -32,6 +32,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-vinegar'
+Plug 'airblade/vim-rooter'
 
 " Color Schemes
 Plug 'mhartington/oceanic-next'

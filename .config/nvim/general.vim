@@ -7,8 +7,13 @@ set ignorecase
 " Colorscheme
 syntax on
 syntax enable
-set termguicolors
-colorscheme OceanicNext
+set background=dark
+" set termguicolors
+
+" if (has("termguicolors"))
+"   colorscheme OceanicNext
+" endif
+set t_Co=256
 
 " Enable SpellCheck
 autocmd FileType todo setlocal spell
@@ -17,3 +22,8 @@ autocmd FileType mail setlocal spell
 
 " Fix Line Joins
 set formatoptions+=j
+
+" Java Ale Configuration
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 1
