@@ -13,11 +13,15 @@ PS1='\u@\h \W$(__git_ps1 " (%s)") '
 
 # Aliases
 alias ls='ls --color=auto'
-alias ll='ls -aFl --color=auto'
+alias ll='ls -Fl --color=auto'
+alias lla="ls -aFl --color=auto"
+alias dict="sdcv"
+
+# Games
 alias borderlands="LD_LIBRARY_PATH=~/.steam/bin32/ cd ~/.steam/steam/steamapps/common/Borderlands\ 2 && ~/.steam/bin32/steam-runtime/run.sh ./Borderlands2"
 alias jediacademysp="~/.steam/steam/steamapps/common/Jedi\ Academy/GameData/openjk_sp.x86_64"
 alias jediacademymp="~/.steam/steam/steamapps/common/Jedi\ Academy/GameData/openjk.x86_64"
-alias dict="sdcv"
+alias openmw-mp="/opt/openmw-mp/tes3mp"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export DEVKITPRO=/opt/devkitpro
