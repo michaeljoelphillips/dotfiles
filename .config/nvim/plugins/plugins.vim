@@ -39,6 +39,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'airblade/vim-rooter'
 Plug 'junegunn/vim-github-dashboard'
 Plug 'rizzatti/dash.vim'
+Plug 'semanser/vim-outdated-plugins'
 
 " Color Schemes
 Plug 'mhartington/oceanic-next'
