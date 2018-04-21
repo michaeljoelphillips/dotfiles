@@ -37,7 +37,7 @@ nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>w :Windows<CR>
 
 " Pretty Print JSON
-nnoremap <leader>jf :%!python -m json.tool<CR>
+nnoremap <leader>jf :exe jdaddy#reformat('jdaddy#outer_pos', v:count1)<CR>
 
 " Map VDebug Paths
 nnoremap <leader>vS :call SetupVdebugPaths()<CR>
