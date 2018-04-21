@@ -7,6 +7,12 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
+" Resize Splits (+/-)
+nnoremap <silent>+ :exe "resize +1"<CR>
+nnoremap <silent>_ :exe "resize -1"<CR>
+nnoremap <silent>= :exe "vertical resize +1"<CR>
+nnoremap <silent>- :exe "vertical resize -1"<CR>
+
 " Reload Vim Configuration
 noremap <silent> <leader>V :source ~/.config/nvim/init.vim<CR>:filetype detect<CR>:exe ":echo 'Config Reloaded!'"<CR>
 
