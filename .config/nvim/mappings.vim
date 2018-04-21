@@ -56,6 +56,3 @@ nmap <leader>K <Plug>DashSearch<CR>
 " TagBar Toggle
 nnoremap <leader>] :TagbarOpen j<CR>
 nnoremap <leader>[ :TagbarClose<CR>
-
-" Deoplete Tab Completion
-" inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
