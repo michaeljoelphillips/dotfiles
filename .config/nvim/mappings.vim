@@ -22,6 +22,7 @@ nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gp :Gpush<CR>
 nnoremap <leader>gv :Gvsplit<CR>
+nnoremap <leader>gt :Twiggy<CR>
 
 " Test Mappings
 nmap <silent> <leader>t :TestNearest<CR>
