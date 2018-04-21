@@ -45,15 +45,3 @@ let g:test#transformation = 'docker'
 
 " Github Dashboard
 let g:github_dashboard = { 'username': 'nomad145', 'password': $GITHUB_TOKEN }
-
-" Vim PHP Namespaces
-function! IPhpExpandClass()
-    call PhpExpandClass()
-    call feedkeys('a', 'n')
-endfunction
-
-function! IPhpInsertUse()
-    call PhpInsertUse()
-    " call feedkeys('a', 'n')
-endfunction
-
