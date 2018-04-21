@@ -43,12 +43,6 @@ Plug 'semanser/vim-outdated-plugins'
 
 " Color Schemes
 Plug 'mhartington/oceanic-next'
-" Plug 'joshdick/onedark.vim'
-" Plug 'flazz/vim-colorschemes'
-" Plug 'jacoborus/tender'
-
-" NVim Frontend Plugins
-" Plug 'dzhou121/gonvim-fuzzy'
 
 " Writing Plugins
 Plug 'junegunn/goyo.vim'
