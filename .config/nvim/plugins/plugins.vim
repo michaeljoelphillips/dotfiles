@@ -8,6 +8,13 @@ Plug 'SirVer/ultisnips'
 Plug 'vim-scripts/dbext.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'janko-m/vim-test'
+Plug 'majutsushi/tagbar'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-vinegar'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'brooth/far.vim'
+Plug 'tpope/vim-fugitive'
 
 " PHP Plugins
 Plug 'nelsyeung/twig.vim', { 'for': 'php' }
@@ -23,19 +30,12 @@ Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
 Plug 'mikelue/vim-maven-plugin', { 'for': 'java' }
 
 " Movement/Misc Plugins
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'brooth/far.vim'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
 Plug 'sodapopcan/vim-twiggy'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-jdaddy'
-Plug 'airblade/vim-gitgutter'
-Plug 'majutsushi/tagbar'
-Plug 'tpope/vim-vinegar'
 Plug 'airblade/vim-rooter'
 Plug 'junegunn/vim-github-dashboard'
 Plug 'rizzatti/dash.vim'
