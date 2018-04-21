@@ -16,26 +16,26 @@ nnoremap <silent>- :exe "vertical resize -1"<CR>
 " Reload Vim Configuration
 noremap <silent> <leader>V :source ~/.config/nvim/init.vim<CR>:filetype detect<CR>:exe ":echo 'Config Reloaded!'"<CR>
 
-" Git Aliases
+" Git Mappings
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gp :Gpush<CR>
 nnoremap <leader>gv :Gvsplit<CR>
 
-" Test Aliases
+" Test Mappings
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
-" FZF Aliases
+" FZF Mappings
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>w :Windows<CR>
 
-" Format JSON
+" Pretty Print JSON
 nnoremap <leader>jf :%!python -m json.tool<CR>
 
 " Map VDebug Paths
