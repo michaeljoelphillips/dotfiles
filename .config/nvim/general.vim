@@ -1,6 +1,7 @@
 " Vim Configuration
 set list
 set relativenumber
+set number
 set nowrap
 set ignorecase
 
