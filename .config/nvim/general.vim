@@ -4,6 +4,7 @@ set relativenumber
 set number
 set nowrap
 set ignorecase
+set noea
 
 " Colorscheme
 syntax on
