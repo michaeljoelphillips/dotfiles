@@ -40,7 +40,15 @@ function! DockerTransform(cmd) abort
     return 'docker-compose exec fpm php ' . a:cmd
 endfunction
 
-let g:test#custom_transformations = {'docker': function('DockerTransform')}
+function! PHP72Transform(cmd) abort
+    return 'docker run --rm -it -v `pwd`:/app -w /app php:7.2 ' . a:cmd
+endfunction
+
+let g:test#custom_transformations = {
+	\ 'docker': function('DockerTransform'),
+	\ 'php72': function('PHP72Transform'),
+\ }
+
 let g:test#transformation = 'docker'
 
 " Github Dashboard
