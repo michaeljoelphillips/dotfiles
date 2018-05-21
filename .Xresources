@@ -22,7 +22,7 @@ Xft.rgba: rgb
 
 ! URXVT Configuration
 URxvt*termName: rxvt-256color
-URxvt*font: xft:Hack:pixelsize=10
+URxvt*font: xft:Hack:pixelsize=14
 URxvt.depth: 32
 URxvt*lineSpace: 1
 URxvt.letterSpace: 0

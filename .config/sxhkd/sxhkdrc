@@ -27,8 +27,15 @@ super + shift + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # Float a Node
-alt + {f,shift + f}
-	bspc node -t {floating,tiled}
+alt + y
+	bspc node -g hidden
+
+alt + shift + y
+	bspc node $(bspc query -N -n .hidden | tail -n1) -g hidden=off; \
+	bspc node -f $(bspc query -N -n .fullscreen | tail -n1)
+
+alt + {f,shift + f,t,shift + t}
+	bspc node -t {fullscreen,floating,tiled,pseudo_tiled}
 
 # Make a window node sticky
 alt + s
@@ -70,3 +77,6 @@ alt + t
 
 alt + shift + 5
 	scrot -s -e mv $f '/home/nomad/Pictures/Screenshots/'
+
+alt + Escape
+	pkill -USR1 -x sxhkd

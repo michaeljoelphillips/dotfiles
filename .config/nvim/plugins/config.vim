@@ -6,16 +6,31 @@ function! SetupVdebugPaths()
 endfunction
 
 " Ale Configuration
+let g:ale_fixers = {
+\   'php': ['php_cs_fixer']
+\}
+
+let g:ale_linters = {
+\   'php': ['phpcs']
+\}
+
 let g:ale_php_langserver_use_global = 1
-let g:ale_php_langserver_executable = expand("~/.composer/vendor/felixfbecker/language-server/bin/php-language-server.php")
+let g:ale_php_langserver_executable = "/home/nomad/.config/composer/vendor/bin/php-language-server.php"
 let g:ale_php_phpcs_standard = "PSR2"
+let g:ale_php_cs_fixer_options = "--rules='{\"@PSR2\": true, \"@Symfony\": true, \"ordered_imports\": {\"sortAlgorithm\": \"alpha\"}}'"
 
 " Deoplete Configuration
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
 let g:deoplete#ignore_sources.php = ['omni']
+
 " Close the preview window after completion.
 autocmd InsertLeave * if pumvisible() == 0 | pclose | endif
+
+" LanguageServer Configuration
+let g:LanguageClient_serverCommands = {
+\   'php': ['php', '/home/nomad/.config/composer/vendor/bin/php-language-server.php'],
+\}
 
 " Netrw Configuration
 let g:netrw_liststyle = 3
