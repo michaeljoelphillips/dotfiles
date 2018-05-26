@@ -32,3 +32,7 @@ let g:ale_lint_on_save = 1
 
 " NetRW Buffer Fix
 autocmd FileType netrw setl bufhidden=delete
+
+" Set Default Tab Behavior
+set tabstop=4
+set shiftwidth=4
