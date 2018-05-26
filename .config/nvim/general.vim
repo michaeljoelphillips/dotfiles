@@ -5,6 +5,7 @@ set number
 set nowrap
 set ignorecase
 set noea
+set icm=nosplit
 
 " Colorscheme
 syntax on
