@@ -56,7 +56,7 @@ function! DockerTransform(cmd) abort
 endfunction
 
 function! PHP72Transform(cmd) abort
-    return 'docker run --rm -it -v `pwd`:/app -w /app php:7.2 ' . a:cmd
+    return 'docker run --rm -it -v `pwd`:/app -w /app nomad145/php:7.2-debug ' . a:cmd
 endfunction
 
 let g:test#custom_transformations = {
@@ -68,3 +68,7 @@ let g:test#transformation = 'docker'
 
 " Github Dashboard
 let g:github_dashboard = { 'username': 'nomad145', 'password': $GITHUB_TOKEN }
+
+" GitGutter
+" Fixes https://github.com/airblade/vim-gitgutter/issues/509
+let g:gitgutter_async = 0
