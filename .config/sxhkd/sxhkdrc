@@ -26,16 +26,25 @@ super + {h,j,k,l}
 super + shift + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
-# Float a Node
+# Make the node hidden and move it to the `below` layer
+#
+# This allows fullscreen windows to be hidden without being interrupted by new
+# windows in the tile or focus change to floating windows.
 alt + y
-	bspc node -g hidden
+	bspc node -l below -g hidden
 
+# Unhide and move a previously hidden fullscreen window to the above layer
 alt + shift + y
-	bspc node $(bspc query -N -n .hidden | tail -n1) -g hidden=off; \
-	bspc node -f $(bspc query -N -n .fullscreen | tail -n1)
+	bspc node $(bspc query -N -n .fullscreen.hidden | tail -n1) -g hidden=off -l above -f
 
-alt + {f,shift + f,t,shift + t}
-	bspc node -t {fullscreen,floating,tiled,pseudo_tiled}
+alt + f
+	bspc node -t fullscreen
+
+alt + shift + f
+	bspc node -t floating
+
+alt + t
+	bspc node -t tiled
 
 # Make a window node sticky
 alt + s
