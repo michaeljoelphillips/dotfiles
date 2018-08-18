@@ -72,3 +72,6 @@ let g:github_dashboard = { 'username': 'nomad145', 'password': $GITHUB_TOKEN }
 " GitGutter
 " Fixes https://github.com/airblade/vim-gitgutter/issues/509
 let g:gitgutter_async = 0
+
+" NetRW config
+let g:netrw_localrmdir = 'rm -r'
