@@ -6,6 +6,9 @@ source /usr/share/git/completion/git-prompt.sh
 source /usr/share/git/completion/git-completion.bash
 source /usr/share/pass/completion/pass.bash-completion
 
+# Set XDG Directories
+export XDG_CONFIG_HOME="${HOME}/.config"
+
 PS1='\u@\h \W$(__git_ps1 " (%s)") '
 
 # If not running interactively, don't do anything
@@ -23,8 +26,12 @@ alias jediacademysp="~/.steam/steam/steamapps/common/Jedi\ Academy/GameData/open
 alias jediacademymp="~/.steam/steam/steamapps/common/Jedi\ Academy/GameData/openjk.x86_64"
 alias openmw-mp="/opt/openmw-mp/tes3mp"
 
+# Include global composer packages
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=/opt/devkitARM
 
 # Infrequent Commands
 # gpick - On-screen color picker

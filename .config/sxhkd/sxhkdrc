@@ -35,7 +35,7 @@ alt + y
 
 # Unhide and move a previously hidden fullscreen window to the above layer
 alt + shift + y
-	bspc node $(bspc query -N -n .fullscreen.hidden | tail -n1) -g hidden=off -l above -f
+	bspc node $(bspc query -N -n .hidden | tail -n1) -g hidden=off -l above -f
 
 alt + f
 	bspc node -t fullscreen
