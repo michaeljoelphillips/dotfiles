@@ -65,3 +65,6 @@ nmap <leader>* <Plug>VinegarTabUp
 
 " Clear Superfluous Whitespace
 nmap <leader>s :%s/\s\+$//e<CR>
+
+" Run ALEFix
+nmap <leader>z <Plug>(ale_fix)
