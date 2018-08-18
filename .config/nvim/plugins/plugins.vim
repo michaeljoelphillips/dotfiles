@@ -16,13 +16,15 @@ Plug 'junegunn/fzf.vim'
 Plug 'brooth/far.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+Plug 'tpope/vim-eunuch'
+Plug 'junkblocker/patchreview-vim'
+Plug 'codegram/vim-codereview'
 
 " PHP Plugins
 Plug 'nelsyeung/twig.vim', { 'for': 'php' }
 Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 Plug 'noahfrederick/vim-composer', { 'for': 'php' }
 Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
-" Plug 'swekaj/php-foldexpr.vim', { 'for': 'php' }
 Plug 'vim-php/tagbar-phpctags.vim', { 'for': 'php' }
 Plug 'jwalton512/vim-blade'
 

@@ -18,6 +18,7 @@ noremap <silent> <leader>V :source ~/.config/nvim/init.vim<CR>:filetype detect<C
 
 " Git Mappings
 nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gp :Gpush<CR>
@@ -35,6 +36,7 @@ nmap <silent> <leader>g :TestVisit<CR>
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>w :Windows<CR>
+nnoremap <leader>m :Marks<CR>
 
 " Pretty Print JSON
 nnoremap <leader>jf :exe jdaddy#reformat('jdaddy#outer_pos', v:count1)<CR>
@@ -43,7 +45,7 @@ nnoremap <leader>jf :exe jdaddy#reformat('jdaddy#outer_pos', v:count1)<CR>
 nnoremap <leader>vS :call SetupVdebugPaths()<CR>
 
 " Clear Search Highlighting
-nmap <leader>/ :let @/ = ""<CR>
+nmap <leader>/ :noh<CR>
 
 " Insert Use Statements
 " autocmd User Composer nmap <buffer> <leader>u <Plug>(composer-use)

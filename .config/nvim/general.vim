@@ -4,6 +4,7 @@ set relativenumber
 set number
 set nowrap
 set ignorecase
+set smartcase
 set noea
 set icm=nosplit
 
