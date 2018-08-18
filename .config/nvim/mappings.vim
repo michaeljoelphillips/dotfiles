@@ -43,7 +43,7 @@ nnoremap <leader>jf :exe jdaddy#reformat('jdaddy#outer_pos', v:count1)<CR>
 nnoremap <leader>vS :call SetupVdebugPaths()<CR>
 
 " Clear Search Highlighting
-nmap <leader>hl :let @/ = ""<CR>
+nmap <leader>/ :let @/ = ""<CR>
 
 " Insert Use Statements
 " autocmd User Composer nmap <buffer> <leader>u <Plug>(composer-use)
