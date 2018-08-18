@@ -31,6 +31,7 @@ Plug 'jwalton512/vim-blade'
 " Java Plugins
 Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
 Plug 'mikelue/vim-maven-plugin', { 'for': 'java' }
+Plug 'udalov/kotlin-vim', { 'for': 'kotlin' }
 
 " Movement/Misc Plugins
 Plug 'tpope/vim-commentary'

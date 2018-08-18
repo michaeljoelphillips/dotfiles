@@ -40,8 +40,8 @@ font-0 = Hack-Bold:size=10:antialias=true;1
 font-1 = FontAwesome:size=12:antialias=true;1
 
 modules-left = bspwm mpd
-modules-center = wlan memory cpu temperature
-modules-right = date
+modules-center = wlan memory cpu cpufreq temperature
+modules-right = uptime date
 
 tray-position = right
 tray-padding = 2
@@ -92,6 +92,32 @@ format-prefix = ":"
 format-prefix-foreground = ${colors.foreground}
 label = %percentage%%
 
+[module/cpufreq]
+type = custom/script
+exec = cat /proc/cpuinfo | grep 'cpu MHz' | awk '{print $4}' | head -n1
+interval = 2
+
+format-prefix = ":"
+format-prefix-foreground = ${colors.foreground}
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 2
+warn-temperature = 50
+
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
+
+label = %temperature%
+label-warn = %temperature%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 = ":"
+ramp-1 = ":"
+ramp-2 = ":"
+
+ramp-foreground = ${colors.foreground}
+
 [module/memory]
 type = internal/memory
 interval = 2
@@ -125,23 +151,10 @@ format-prefix-foreground = ${colors.foreground-alt}
 
 label = %date% %time%
 
-[module/temperature]
-type = internal/temperature
-thermal-zone = 0
-warn-temperature = 60
-
-format = <ramp> <label>
-format-warn = <ramp> <label-warn>
-
-label = %temperature%
-label-warn = %temperature%
-label-warn-foreground = ${colors.secondary}
-
-ramp-0 = ":"
-ramp-1 = ":"
-ramp-2 = ":"
-
-ramp-foreground = ${colors.foreground}
+[module/uptime]
+type = custom/script
+exec = ~/Code/polybar-scripts/polybar-scripts/system-uptime-pretty/system-uptime-pretty.sh
+interval = 30
 
 [settings]
 screenchange-reload = true
