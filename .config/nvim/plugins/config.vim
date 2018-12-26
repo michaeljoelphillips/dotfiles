@@ -10,10 +10,6 @@ let g:ale_fixers = {
 \   'php': ['php_cs_fixer']
 \}
 
-let g:ale_linters = {
-\   'php': ['phpcs']
-\}
-
 let g:ale_php_langserver_use_global = 1
 let g:ale_php_langserver_executable = "/home/nomad/.config/composer/vendor/bin/php-language-server.php"
 let g:ale_php_phpcs_standard = "PSR2"
