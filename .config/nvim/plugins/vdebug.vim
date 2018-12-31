@@ -3,5 +3,4 @@ function! SetupVdebugPaths()
     let g:vdebug_options["watch_window_style"] = 'compact'
 endfunction
 
-" Map VDebug Paths
 nnoremap <leader>vS :call SetupVdebugPaths()<CR>
