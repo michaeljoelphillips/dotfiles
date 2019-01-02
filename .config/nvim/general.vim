@@ -13,6 +13,7 @@ set shiftwidth=4
 set formatoptions+=j
 set t_Co=256
 set scl=yes
+set noshowmode
 let mapleader = ','
 syntax on
 colorscheme OceanicNext
