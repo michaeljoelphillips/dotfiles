@@ -7,7 +7,8 @@ endfunction
 
 " Ale Configuration
 let g:ale_fixers = {
-\   'php': ['php_cs_fixer']
+\   'php': ['php_cs_fixer'],
+\   'go': ['gofmt']
 \}
 
 let g:ale_linters = {
@@ -44,6 +45,7 @@ let g:UltiSnipsEditSplit = "vertical"
 
 " DBExt
 let g:dbext_default_profile_docker = 'type=PGSQL:user=service_user:dbname=service_db:host=127.0.0.1'
+let g:dbext_default_profile_cqrs = 'type=PGSQL:user=esuser:dbname=organizations:host=127.0.0.1'
 
 " GutenTags
 let g:gutentags_ctags_exclude = ['*.phar', 'cache', 'legacy', '__CG__*', 'node_modules', 'web', '*.js', '*.sql']

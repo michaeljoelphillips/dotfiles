@@ -19,6 +19,7 @@ Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.s
 Plug 'tpope/vim-eunuch'
 Plug 'junkblocker/patchreview-vim'
 Plug 'codegram/vim-codereview'
+Plug 'ruanyl/vim-gh-line'
 
 " PHP Plugins
 Plug 'nelsyeung/twig.vim', { 'for': 'php' }
@@ -47,6 +48,7 @@ Plug 'semanser/vim-outdated-plugins'
 
 " Color Schemes
 Plug 'mhartington/oceanic-next'
+Plug 'lifepillar/vim-solarized8'
 
 " Writing Plugins
 Plug 'junegunn/goyo.vim'
