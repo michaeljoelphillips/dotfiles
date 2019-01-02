@@ -28,7 +28,6 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-journal'
 Plug 'junegunn/vim-peekaboo'
 Plug 'nelsyeung/twig.vim', { 'for': 'php' }
-Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 Plug 'noahfrederick/vim-composer', { 'for': 'php' }
 Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
 Plug 'vim-php/tagbar-phpctags.vim', { 'for': 'php' }
@@ -38,5 +37,6 @@ Plug 'mikelue/vim-maven-plugin', { 'for': 'java' }
 Plug 'udalov/kotlin-vim', { 'for': 'kotlin' }
 Plug 'mhartington/oceanic-next'
 Plug 'lifepillar/vim-solarized8'
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 
 call plug#end()

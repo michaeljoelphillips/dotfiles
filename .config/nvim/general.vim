@@ -12,6 +12,7 @@ set tabstop=4
 set shiftwidth=4
 set formatoptions+=j
 set t_Co=256
+set scl=yes
 let mapleader = ','
 syntax on
 colorscheme OceanicNext

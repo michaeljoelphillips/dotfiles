@@ -1,5 +1,6 @@
 # Path Additions
 export PATH="/usr/local/sbin:$PATH"
+export PATH="$PATH:/Users/mphillips2/.composer/vendor/bin"
 
 # Sources
 # source ~/.bash_includes/bash_completion
@@ -39,8 +40,13 @@ export EDITOR="vim"
 export PASSWORD_STORE_CLIP_TIME=15
 export COMPOSE_HTTP_TIMEOUT=120
 export LYNX_CFG_PATH="/Users/nomad/.config"
-export GITHUB_TOKEN="22b8114f9c6e4aab8ab65fbf1863bb064990f681"
-export HOMEBREW_GITHUB_API_TOKEN="030056abe2fa3e71e48c2e6c3efdcd013deb4f8c"
+export GH_USER="nomad145"
+export GH_PASS="22b8114f9c6e4aab8ab65fbf1863bb064990f681"
+# export HOMEBREW_GITHUB_API_TOKEN="dd6ababaac8131982c326fc0bf3bf3d8b842adb9"
+export WTF_GITHUB_TOKEN=8e8179928b6f369943db483d4383d2c7c368e717
+
+export TWITCH_CLIENT_SECRET=nx1emgpasjv19aut3aqiuo903busbn
+export TWITCH_CLIENT_ID=g0m4aoe1qgv0lqais31yp27yzvw603
 
 # GPG-Agent
 GPG_TTY=$(tty)
