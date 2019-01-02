@@ -12,7 +12,8 @@ bspc config focused_border_color '#5860A9'
 bspc config normal_border_color '#00000'
 
 # Window Gap Configuration
-bspc config top_padding 50
-bspc config left_padding 30
-bspc config right_padding 30
-bspc config window_gap 20
+bspc config top_padding 40
+bspc config bottom_padding 10
+bspc config left_padding 10
+bspc config right_padding 10
+bspc config window_gap 10

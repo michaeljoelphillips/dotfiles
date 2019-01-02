@@ -8,8 +8,12 @@ source /usr/share/pass/completion/pass.bash-completion
 
 # Set XDG Directories
 export XDG_CONFIG_HOME="${HOME}/.config"
+export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=/opt/devkitARM
+export PATH="$PATH:$HOME/.config/composer/vendor/bin:$(ruby -e 'print Gem.user_dir')/bin"
 
 PS1='\u@\h \W$(__git_ps1 " (%s)") '
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -19,19 +23,10 @@ alias ls='ls --color=auto'
 alias ll='ls -Fl --color=auto'
 alias lla="ls -aFl --color=auto"
 alias dict="sdcv"
-
-# Games
 alias borderlands="LD_LIBRARY_PATH=~/.steam/bin32/ cd ~/.steam/steam/steamapps/common/Borderlands\ 2 && ~/.steam/bin32/steam-runtime/run.sh ./Borderlands2"
 alias jediacademysp="~/.steam/steam/steamapps/common/Jedi\ Academy/GameData/openjk_sp.x86_64"
 alias jediacademymp="~/.steam/steam/steamapps/common/Jedi\ Academy/GameData/openjk.x86_64"
 alias openmw-mp="/opt/openmw-mp/tes3mp"
-
-# Include global composer packages
-export PATH="$PATH:$HOME/.config/composer/vendor/bin"
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-export DEVKITPRO=/opt/devkitpro
-export DEVKITARM=/opt/devkitARM
 
 # Infrequent Commands
 # gpick - On-screen color picker

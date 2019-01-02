@@ -56,7 +56,7 @@ super + {Left,Down,Up,Right}
 
 # Show Menu
 alt + space
-	rofi -show combi
+	rofi -show run
 
 # Show Pass
 alt + p
