@@ -5,4 +5,4 @@ let g:LanguageClient_serverCommands = {
 
 nnoremap <silent> <leader>r :call LanguageClient_textDocument_references()<CR>
 nnoremap <silent> <leader>h :call LanguageClient_textDocument_hover()<CR>
-inoremap <silent> <C-m> <C-o>:call LanguageClient#textDocument_signatureHelp()<CR>
+inoremap <silent> <C-y> <C-o>:call LanguageClient#textDocument_signatureHelp()<CR>
