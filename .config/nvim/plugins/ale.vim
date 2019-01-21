@@ -1,6 +1,7 @@
 let g:ale_fixers = {
 \   'php': ['php_cs_fixer'],
-\   'go': ['gofmt']
+\   'go': ['gofmt'],
+\   'kotlin': ['ktlint']
 \}
 
 let g:ale_php_langserver_use_global = 1
