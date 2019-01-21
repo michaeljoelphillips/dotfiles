@@ -14,6 +14,7 @@ set formatoptions+=j
 set t_Co=256
 set scl=yes
 set noshowmode
+set exrc
 let mapleader = ','
 syntax on
 colorscheme OceanicNext
@@ -24,6 +25,7 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <silent> <leader>V :source ~/.config/nvim/init.vim<CR>:filetype detect<CR>
+noremap <leader>C :vsplit $MYVIMRC<CR>
 nmap <leader>/ :noh<CR>
 nmap <leader>s :%s/\s\+$//e<CR>
 autocmd FileType todo setlocal spell
