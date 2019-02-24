@@ -39,5 +39,6 @@ Plug 'udalov/kotlin-vim', { 'for': 'kotlin' }
 Plug 'mhartington/oceanic-next'
 Plug 'lifepillar/vim-solarized8'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
