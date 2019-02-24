@@ -24,7 +24,7 @@ noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
-noremap <silent> <leader>V :source ~/.config/nvim/init.vim<CR>:filetype detect<CR>
+noremap <silent> <leader>V :source ~/.config/nvim/init.vim<CR>:source .nvimrc<CR>:filetype detect<CR>
 noremap <leader>C :vsplit $MYVIMRC<CR>
 nmap <leader>/ :noh<CR>
 nmap <leader>s :%s/\s\+$//e<CR>
