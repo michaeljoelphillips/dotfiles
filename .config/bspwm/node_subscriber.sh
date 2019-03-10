@@ -1,5 +1,6 @@
 #!/bin/sh
 
+TRANSFER_PIPE='/tmp/bspwm_transfer_pipe'
 FLOAT_WIDTH=640
 FLOAT_HEIGHT=360
 FLOAT_X=1278
@@ -46,36 +47,46 @@ function isFocused() {
 	test "$TRANSFERRED_NODE" = "$CURRENT_NODE" && echo true || echo false
 }
 
-while read NAME SRC_MONITOR SRC_DESKTOP SRC_NODE DST_MONITOR DST_DESKTOP DST_NODE
-do
-	NODE_INFO=`getNode $SRC_NODE`
-	NODE_CLASS=`json "$NODE_INFO" '.client.className'`
-	NODE_DIMENSIONS=`json "$NODE_INFO" '.client.floatingRectangle'`
-
-	if [[ $NODE_CLASS == '"Vlc"' ]]; then
-		case $DST_DESKTOP in
-			0x00C00004)
-				bspc node $SRC_NODE -t tiled
-				;;
-			0x00C00005)
-				# If our sticky node is focused, we want to fullscreen and
-				# focus the terminal window instead.
-				if [[ `isFocused $NODE_INFO` == true ]]; then
-					bspc node -f next
-					bspc node -t fullscreen -l above
-				fi
-
-				bspc node $SRC_NODE -t fullscreen -l below
-				;;
-			0x00C00006)
-				bspc node $SRC_NODE -t floating -l above
-
-				resizeFloatingNode "$NODE_DIMENSIONS"
-				moveFloatingNode "$NODE_DIMENSIONS"
-				;;
-			0x00C00007)
-				bspc node $SRC_NODE -t fullscreen
-				;;
-		esac
+function main() {
+	if [[ ! -p $TRANSFER_PIPE ]]; then
+		mkfifo $TRANSFER_PIPE
 	fi
-done < "/dev/stdin"
+
+	bspc subscribe node_transfer > $TRANSFER_PIPE &
+
+	while read NAME SRC_MONITOR SRC_DESKTOP SRC_NODE DST_MONITOR DST_DESKTOP DST_NODE
+	do
+		NODE_INFO=`getNode $SRC_NODE`
+		NODE_CLASS=`json "$NODE_INFO" '.client.className'`
+		NODE_DIMENSIONS=`json "$NODE_INFO" '.client.floatingRectangle'`
+
+		if [[ $NODE_CLASS == '"Vlc"' ]]; then
+			case $DST_DESKTOP in
+				0x00C00004)
+					bspc node $SRC_NODE -t tiled
+					;;
+				0x00C00005)
+					# If our sticky node is focused, we want to fullscreen and
+					# focus the terminal window instead.
+					if [[ `isFocused $NODE_INFO` == true ]]; then
+						bspc node -f next
+						bspc node -t fullscreen -l above
+					fi
+
+					bspc node $SRC_NODE -t fullscreen -l below
+					;;
+				0x00C00006)
+					bspc node $SRC_NODE -t floating -l above
+
+					resizeFloatingNode "$NODE_DIMENSIONS"
+					moveFloatingNode "$NODE_DIMENSIONS"
+					;;
+				0x00C00007)
+					bspc node $SRC_NODE -t fullscreen
+					;;
+			esac
+		fi
+	done < $TRANSFER_PIPE
+}
+
+main "$@"
