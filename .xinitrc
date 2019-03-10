@@ -11,5 +11,8 @@ compton -b
 polybar top &
 sleep 2s && .bin/twitch-window-manager &
 
+# Load Xmodmap
+xmodmap .Xmodmap
+
 # Start the window manager
 exec bspwm
