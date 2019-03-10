@@ -4,7 +4,7 @@ set number
 set nowrap
 set ignorecase
 set smartcase
-set noea
+set noequalalways
 set icm=nosplit
 set background=dark
 set termguicolors
@@ -25,7 +25,7 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <silent> <leader>V :source ~/.config/nvim/init.vim<CR>:source .nvimrc<CR>:filetype detect<CR>
-noremap <leader>C :vsplit $MYVIMRC<CR>
+noremap <leader>C :tabedit $MYVIMRC<CR>
 nmap <leader>/ :noh<CR>
 nmap <leader>s :%s/\s\+$//e<CR>
 autocmd FileType todo setlocal spell
