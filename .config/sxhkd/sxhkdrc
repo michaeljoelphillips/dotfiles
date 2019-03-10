@@ -73,7 +73,7 @@ shift + F7
 	mpc next
 
 # Lock Desktop
-ctrl + super + z
+Pause
 	light-locker-command -l
 
 # Suspend Desktop
