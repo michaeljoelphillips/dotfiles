@@ -9,6 +9,7 @@ sxhkd &
 light-locker &
 compton -b
 polybar top &
+sleep 2s && .bin/twitch-window-manager &
 
 # Start the window manager
 exec bspwm
