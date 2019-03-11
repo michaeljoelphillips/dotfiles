@@ -11,6 +11,9 @@ case $1 in
 	nvim)
 		CONFIG_FILE=~/.config/nvim/init.vim
 		;;
+	bash)
+		CONFIG_FILE=~/.bashrc
+		;;
 	*)
 		CONFIG_FILE=~/.config/
 esac
