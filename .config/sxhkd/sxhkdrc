@@ -2,7 +2,7 @@
 alt + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
-button{8,9}
+button{9,8}
 	bspc desktop -f {next,prev}.local
 
 # Switch Desktop
