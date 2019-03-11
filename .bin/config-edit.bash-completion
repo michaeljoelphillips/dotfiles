@@ -1,0 +1,3 @@
+#!/bin/sh
+
+complete -W "sxhkd bspwm nvim" config-edit

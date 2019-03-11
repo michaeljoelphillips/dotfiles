@@ -5,12 +5,13 @@
 source /usr/share/git/completion/git-prompt.sh
 source /usr/share/git/completion/git-completion.bash
 source /usr/share/pass/completion/pass.bash-completion
+source ~/.local/share/completion/config-edit.bash
 
 # Set XDG Directories
 export XDG_CONFIG_HOME="${HOME}/.config"
 export DEVKITPRO=/opt/devkitpro
 export DEVKITARM=/opt/devkitARM
-export PATH="$PATH:$HOME/.config/composer/vendor/bin:$(ruby -e 'print Gem.user_dir')/bin"
+export PATH="$PATH:$HOME/.config/composer/vendor/bin:$(ruby -e 'print Gem.user_dir')/bin:$HOME/.bin"
 
 PS1='\u@\h \W$(__git_ps1 " (%s)") '
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
