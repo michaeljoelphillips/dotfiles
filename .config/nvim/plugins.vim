@@ -40,5 +40,11 @@ Plug 'mhartington/oceanic-next'
 Plug 'lifepillar/vim-solarized8'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'posva/vim-vue', { 'for': 'vue' }
+Plug 'junegunn/vim-easy-align'
+Plug 'ap/vim-css-color', { 'for': 'css' }
+Plug 'liuchengxu/vista.vim'
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'lervag/vimtex'
 
 call plug#end()

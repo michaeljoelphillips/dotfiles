@@ -1,7 +1,12 @@
 let g:ale_fixers = {
 \   'php': ['php_cs_fixer'],
 \   'go': ['gofmt'],
-\   'kotlin': ['ktlint']
+\   'kotlin': ['ktlint'],
+\   'javascript': ['prettier'],
+\   'css': ['prettier'],
+\   'vue': ['prettier'],
+\   'html': ['prettier'],
+\   'java': ['google_java_format'],
 \}
 
 let g:ale_php_phpcs_standard = 'PSR2'

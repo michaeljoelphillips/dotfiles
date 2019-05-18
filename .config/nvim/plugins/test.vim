@@ -7,6 +7,10 @@ function! DockerTransform(cmd) abort
     return 'docker-compose exec fpm php ' . a:cmd
 endfunction
 
+function! PHP73Transform(cmd) abort
+    return 'docker run --rm -it -v `pwd`:/app -w /app php:7.3 ' . a:cmd
+endfunction
+
 function! PHP72Transform(cmd) abort
     return 'docker run --rm -it -v `pwd`:/app -w /app nomad145/php:7.2-debug ' . a:cmd
 endfunction
@@ -17,6 +21,7 @@ endfunction
 
 let g:test#custom_transformations = {
 	\ 'docker': function('DockerTransform'),
+	\ 'php73': function('PHP73Transform'),
 	\ 'php72': function('PHP72Transform'),
 	\ 'php71': function('PHP71Transform'),
 \ }
