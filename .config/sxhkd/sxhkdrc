@@ -2,9 +2,6 @@
 alt + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
-button{9,8}
-	bspc desktop -f {next,prev}.local
-
 # Switch Desktop
 ctrl + alt + {l,h}
 	bspc desktop -f {next,prev}.local
@@ -59,11 +56,11 @@ super + {Left,Down,Up,Right}
 
 # Show Menu
 alt + space
-	rofi -show run
+	rofi -show open
 
-# Show Pass
-alt + p
-	passmenu
+# Close the node
+alt + w
+	bspc node -c
 
 # Mopidy Controls
 shift + F6
@@ -77,7 +74,7 @@ shift + F7
 
 # Lock Desktop
 Pause
-	light-locker-command -l
+	gllock
 
 # Suspend Desktop
 shift + Pause
@@ -92,3 +89,12 @@ alt + shift + 5
 
 alt + Escape
 	pkill -USR1 -x sxhkd
+
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+XF86AudioRaiseVolume
+	pactl set-sink-volume @DEFAULT_SINK@ +3500
+
+XF86AudioLowerVolume
+	pactl set-sink-volume @DEFAULT_SINK@ -3500
