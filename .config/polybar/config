@@ -36,12 +36,12 @@ padding-right = 2
 module-margin-left = 2
 module-margin-right = 0
 
-font-0 = Hack-Bold:size=10:antialias=true;1
+font-0 = Hack-Bold:size=9.5:antialias=true;1
 font-1 = FontAwesome:size=12:antialias=true;1
 
 modules-left = bspwm mpd
-modules-center = wlan memory cpu cpufreq temperature
-modules-right = uptime date
+modules-center = title
+modules-right = volume cpu date
 
 tray-position = right
 tray-padding = 2
@@ -84,13 +84,26 @@ format-online = <label-song>
 label-song-maxlen = 250
 label-song-ellipsis = true
 
+[module/title]
+type = internal/xwindow
+
 [module/cpu]
 type = internal/cpu
 interval = 2
 
-format-prefix = ":"
+format = <ramp-coreload>
+; format-prefix = ":"
 format-prefix-foreground = ${colors.foreground}
 label = %percentage%%
+ramp-coreload-spacing = 0
+ramp-coreload-0 = ▁
+ramp-coreload-1 = ▂
+ramp-coreload-2 = ▃
+ramp-coreload-3 = ▄
+ramp-coreload-4 = ▅
+ramp-coreload-5 = ▆
+ramp-coreload-6 = ▇
+ramp-coreload-7 = █
 
 [module/cpufreq]
 type = custom/script
@@ -149,7 +162,7 @@ time-alt = %H:%M
 format-prefix =
 format-prefix-foreground = ${colors.foreground-alt}
 
-label = %date% %time%
+label = %time%
 
 [module/uptime]
 type = custom/script
@@ -162,5 +175,11 @@ screenchange-reload = true
 [global/wm]
 margin-top = 0
 margin-bottom = 0
+
+[module/volume]
+type = internal/pulseaudio
+format-volume = <label-volume> 
+interval = 5
+label-muted = 0% 
 
 ; vim:ft=dosini
