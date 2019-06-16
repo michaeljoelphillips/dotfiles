@@ -11,6 +11,7 @@ xsetroot -cursor_name left_ptr
 
 # Start desktop services
 sxhkd &
+dunst &
 compton -b
 polybar top &
 xautolock -time 5 -locker "gllock" &
