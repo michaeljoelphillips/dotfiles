@@ -3,6 +3,9 @@
 # Pointer Configuration
 bspc config click_to_focus true
 bspc config focus_follows_pointer false
+bspc config pointer_modifier mod1
+bspc config pointer_action1 move
+bspc config pointer_action3 resize_corner
 
 # Monitor Configuration
 bspc monitor -d Chat Code Web Games
@@ -17,3 +20,12 @@ bspc config bottom_padding 10
 bspc config left_padding 10
 bspc config right_padding 10
 bspc config window_gap 10
+
+# Application Rules
+bspc rule -a Pavucontrol state=floating
+bspc rule -a Steam desktop='^4' follow=off
+bspc rule -a Firefox desktop='^3' follow=on
+bspc rule -a Spotify desktop='^1' follow=on
+bspc rule -a calibre desktop='^1' follow=off
+bspc rule -a Blueman-manager follow=on state=floating
+bspc rule -a discord desktop='^4' follow=off state=floating
