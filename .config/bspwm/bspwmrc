@@ -22,6 +22,7 @@ bspc config right_padding 10
 bspc config window_gap 10
 
 # Application Rules
+bspc rule -a feh state=floating
 bspc rule -a Pavucontrol state=floating
 bspc rule -a Steam desktop='^4' follow=off
 bspc rule -a Firefox desktop='^3' follow=on
