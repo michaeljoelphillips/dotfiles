@@ -84,8 +84,8 @@ shift + Pause
 alt + t
 	urxvt
 
-alt + shift + 5
-	scrot -s -e mv $f '/home/nomad/Pictures/Screenshots/'
+ctrl + alt + shift + 4
+	escrotum -sC
 
 alt + Escape
 	pkill -USR1 -x sxhkd
