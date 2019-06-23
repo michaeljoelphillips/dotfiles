@@ -1,25 +1,53 @@
 # Node Focus
-alt + {_,shift + }{h,j,k,l}
+alt + {_,shift} + {h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # Switch Desktop
 ctrl + alt + {l,h}
 	bspc desktop -f {next,prev}.local
 
+# Preselect Node
+ctrl + alt + shift + {h,j,k,l}
+	bspc node -p ~{west,south,north,east}
+
+# Set pre-select split ratios
+ctrl + shift + alt + {1-9}
+	bspc node -o 0.{1-9}
+
+# Set node split ratios
+ctrl + shift + {1-9}
+	bspc node @/ -r 0.{1-9}
+
+# Move the current node to the newest preselected node
+alt + m
+	bspc node -n newest.!automatic.local
+
+# Move the node to the next/previous monitor
+ctrl + alt + {n,p}
+	bspc node -m {east, west} --follow
+
+# Flip the tree vertically
+ctrl + alt + f
+	bspc node @/ -F vertical
+
+# Rotate the tree 90 degrees
+ctrl + alt + r
+	bspc node @/ -R 90
+
+# Balance all nodes
+ctrl + alt + e
+	bspc node @/ -B
+
 # Focus Last Node
-alt + {grave,Tab}
-	bspc {node,desktop -f last
+alt + {Tab,grave}
+	bspc {node,desktop} -f last
 
 # Focus or Send To Desktop
-alt + {_,shift +}{1-4}
-	bspc {desktop -f,node -d} '^{1-4}'
-
-# Preselect Node
-ctrl + super + {h,j,k,l}
-	bspc node -p {west,south,north,east}
+alt + {_,shift +}{1-2}
+	bspc {desktop -f, node -d} '^{1-2}'
 
 # Resize Node Inward
-super + {h,j,k,l}
+alt + {+,-,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # Resize Node Outward
@@ -59,32 +87,21 @@ alt + space
 	rofi -show open
 
 # Close the node
-alt + w
-	bspc node -c
-
-# Mopidy Controls
-shift + F6
-	mpc toggle
-
-shift + F5
-	mpc prev
-
-shift + F7
-	mpc next
+alt + {_,shift}w
+	bspc node -{c,k}
 
 # Lock Desktop
 Pause
-	gllock
+	xautolock -locknow
 
 # Suspend Desktop
 shift + Pause
 	systemctl suspend
 
-# Open Terminal
-alt + t
-	urxvt
+alt + s
+	escrotum -s -e ~/Code/scatter-shot/clipboard.sh /tmp/screenshot
 
-ctrl + alt + shift + 4
+alt + shift + s
 	escrotum -sC
 
 alt + Escape
