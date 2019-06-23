@@ -7,12 +7,13 @@ if [ "$@" ]; then
 fi
 
 cat << EOF
-alacritty
+define
+spotify
 calibre
 firefox
-pavucontrol
 rofi-pass
+alacritty
 rofi-steam
 rofi-twitch
-spotify
+pavucontrol
 EOF
