@@ -10,9 +10,9 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/top]
-monitor = DVI-I-1
+monitor = DP-2
 
-width = 1920
+width = 2560
 height = 30
 
 offset-x = 0
@@ -72,17 +72,8 @@ label-empty = %icon%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 1
 
-ws-icon-0 = Chat;
-ws-icon-1 = Web;
-ws-icon-2 = Code;
-ws-icon-3 = Games;
-
-[module/mpd]
-type = internal/mpd
-format-online = <label-song>
-
-label-song-maxlen = 250
-label-song-ellipsis = true
+ws-icon-0 = Web;
+ws-icon-1 = Games;
 
 [module/title]
 type = internal/xwindow
@@ -105,50 +96,6 @@ ramp-coreload-5 = ▆
 ramp-coreload-6 = ▇
 ramp-coreload-7 = █
 
-[module/cpufreq]
-type = custom/script
-exec = cat /proc/cpuinfo | grep 'cpu MHz' | awk '{print $4}' | head -n1
-interval = 2
-
-format-prefix = ":"
-format-prefix-foreground = ${colors.foreground}
-
-[module/temperature]
-type = internal/temperature
-thermal-zone = 2
-warn-temperature = 50
-
-format = <ramp> <label>
-format-warn = <ramp> <label-warn>
-
-label = %temperature%
-label-warn = %temperature%
-label-warn-foreground = ${colors.secondary}
-
-ramp-0 = ":"
-ramp-1 = ":"
-ramp-2 = ":"
-
-ramp-foreground = ${colors.foreground}
-
-[module/memory]
-type = internal/memory
-interval = 2
-
-format-prefix = ":"
-format-prefix-foreground = ${colors.foreground}
-label = %percentage_used%%
-
-[module/wlan]
-type = internal/network
-interface = wlp4s0
-interval = 3.0
-
-format-connected = <label-connected>
-label-connected = :%downspeed% %upspeed%
-
-accumulate-stats = true
-
 [module/date]
 type = internal/date
 interval = 5
@@ -163,11 +110,6 @@ format-prefix =
 format-prefix-foreground = ${colors.foreground-alt}
 
 label = %time%
-
-[module/uptime]
-type = custom/script
-exec = ~/Code/polybar-scripts/polybar-scripts/system-uptime-pretty/system-uptime-pretty.sh
-interval = 30
 
 [settings]
 screenchange-reload = true
