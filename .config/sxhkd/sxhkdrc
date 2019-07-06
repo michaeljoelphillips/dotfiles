@@ -75,8 +75,8 @@ alt + t
 	bspc node -t tiled
 
 # Make a window node sticky
-alt + s
-	bspc node -g sticky
+# alt + s
+# 	bspc node -g sticky
 
 # Move a Floating Node
 super + {Left,Down,Up,Right}
@@ -115,3 +115,12 @@ XF86AudioRaiseVolume
 
 XF86AudioLowerVolume
 	pactl set-sink-volume @DEFAULT_SINK@ -3500
+
+XF86AudioPlay
+	playerctl play-pause
+
+XF86AudioNext
+	playerctl next
+
+XF86AudioPrev
+	playerctl previous
