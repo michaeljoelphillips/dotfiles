@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the background
-feh --bg-center /home/nomad/Pictures/background.jpg &
+feh --bg-fill /home/nomad/Pictures/background.jpg &
 
 # Set the keyboard delay
 xset r rate 200
@@ -14,7 +14,7 @@ sxhkd &
 dunst &
 compton -b
 polybar top &
-xautolock -time 5 -locker "gllock" &
+xautolock -time 5 -locker "gllock" -killtime 10 -killer "xset dpms force off" &
 sleep 2s && .bin/twitch-window-manager &
 dapper -v -e /home/nomad/.config/autostart
 

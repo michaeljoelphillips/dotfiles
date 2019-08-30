@@ -74,6 +74,9 @@ alt + shift + f
 alt + t
 	bspc node -t tiled
 
+alt + p
+	bspc node -t pseudo_tiled
+
 # Make a window node sticky
 # alt + s
 # 	bspc node -g sticky
@@ -111,10 +114,10 @@ XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 XF86AudioRaiseVolume
-	pactl set-sink-volume @DEFAULT_SINK@ +3500
+	pactl set-sink-volume @DEFAULT_SINK@ +2300
 
 XF86AudioLowerVolume
-	pactl set-sink-volume @DEFAULT_SINK@ -3500
+	pactl set-sink-volume @DEFAULT_SINK@ -2300
 
 XF86AudioPlay
 	playerctl play-pause
