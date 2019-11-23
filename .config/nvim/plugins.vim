@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/deoplete-lsp'
 Plug 'w0rp/ale'
 Plug 'joonty/vdebug'
 Plug 'SirVer/ultisnips'
@@ -50,5 +51,7 @@ Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'wesQ3/vim-windowswap'
 Plug 'arcticicestudio/nord-vim'
+Plug 'justinmk/vim-dirvish'
+Plug 'neovim/nvim-lsp'
 
 call plug#end()
