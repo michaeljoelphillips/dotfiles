@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/deoplete-lsp'
 Plug 'w0rp/ale'
 Plug 'joonty/vdebug'
 Plug 'SirVer/ultisnips'
@@ -46,5 +47,7 @@ Plug 'ap/vim-css-color', { 'for': 'css' }
 Plug 'liuchengxu/vista.vim'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'lervag/vimtex'
+Plug 'justinmk/vim-dirvish'
+Plug 'neovim/nvim-lsp'
 
 call plug#end()
