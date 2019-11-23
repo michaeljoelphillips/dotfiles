@@ -1,0 +1,15 @@
+# /home/nomad/.config/tmuxinator/default.yml
+
+name: workspace
+root: ~/
+tmux_options: -f ~/.config/tmux.conf
+windows:
+  - main:
+      layout: main-vertical
+      panes:
+        - weechat
+        - gotop
+        -
+  - code:
+      panes:
+        -

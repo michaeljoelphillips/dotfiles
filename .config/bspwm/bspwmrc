@@ -3,17 +3,34 @@
 # Pointer Configuration
 bspc config click_to_focus true
 bspc config focus_follows_pointer false
+bspc config pointer_modifier mod1
+bspc config pointer_action1 move
+bspc config pointer_action3 resize_corner
 
 # Monitor Configuration
-bspc monitor -d Chat Code Web Games
+bspc monitor -d Web Games
 
 # Border Colors
 bspc config focused_border_color '#5860A9'
 bspc config normal_border_color '#00000'
 
 # Window Gap Configuration
-bspc config top_padding 40
-bspc config bottom_padding 10
-bspc config left_padding 10
-bspc config right_padding 10
+bspc config -m 0x00E00002 top_padding 30
+bspc config bottom_padding 0
+bspc config left_padding 0
+bspc config right_padding 0
 bspc config window_gap 10
+
+# Application Rules
+bspc rule -a feh state=floating
+bspc rule -a vlc state=pseudo_tiled
+bspc rule -a Pavucontrol state=floating
+bspc rule -a Steam desktop='^2' follow=off
+bspc rule -a Firefox desktop='^1' follow=on
+bspc rule -a Spotify desktop='^2' follow=on
+bspc rule -a calibre desktop='^2' follow=off
+bspc rule -a Blueman-manager follow=on state=floating
+bspc rule -a calibre-ebook-viewer follow=on state=floating
+bspc rule -a discord desktop='^2' follow=off state=floating
+bspc rule -a dolphin-emu desktop='^2' follow=off state=floating
+bspc rule -a steam_proton desktop='^2' follow=off state=floating

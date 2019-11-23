@@ -14,6 +14,15 @@ case $1 in
 	bash)
 		CONFIG_FILE=~/.bashrc
 		;;
+	newsboat)
+		CONFIG_FILE=~/.config/newsboat
+		;;
+	polybar)
+		CONFIG_FILE=~/.config/polybar/config
+		;;
+	dunst)
+		CONFIG_FILE=~/.config/dunst/dunstrc
+		;;
 	*)
 		CONFIG_FILE=~/.config/
 esac

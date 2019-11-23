@@ -4,7 +4,6 @@ set number
 set nowrap
 set ignorecase
 set smartcase
-set noequalalways
 set icm=nosplit
 set background=dark
 set termguicolors
