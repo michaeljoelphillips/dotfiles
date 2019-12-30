@@ -24,7 +24,7 @@ bspc config window_gap 10
 # Application Rules
 bspc rule -a feh state=floating
 bspc rule -a vlc state=pseudo_tiled
-bspc rule -a Pavucontrol state=floating
+bspc rule -a Vlc state=pseudo_tiled
 bspc rule -a firefox desktop='^1' follow=on
 bspc rule -a Spotify desktop='^2' follow=on
 bspc rule -a calibre desktop='^2' follow=off
@@ -32,5 +32,6 @@ bspc rule -a Blueman-manager follow=on state=floating
 bspc rule -a Steam desktop='^2' follow=off state=floating
 bspc rule -a calibre-ebook-viewer follow=on state=floating
 bspc rule -a discord desktop='^2' follow=off state=floating
+bspc rule -a Pavucontrol desktop='^1' follow=on state=floating
 bspc rule -a dolphin-emu desktop='^2' follow=off state=floating
 bspc rule -a steam_proton desktop='^2' follow=off state=floating
