@@ -19,11 +19,16 @@ function! PHP71Transform(cmd) abort
     return 'docker run --rm -it -v `pwd`:/app -w /app php:7.1 ' . a:cmd
 endfunction
 
+function! PHPLocal(cmd) abort
+    return 'php ' . a:cmd
+endfunction
+
 let g:test#custom_transformations = {
 	\ 'docker': function('DockerTransform'),
 	\ 'php73': function('PHP73Transform'),
 	\ 'php72': function('PHP72Transform'),
 	\ 'php71': function('PHP71Transform'),
+	\ 'php-local': function('PHPLocal'),
 \ }
 
 let g:test#transformation = 'docker'
