@@ -4,7 +4,7 @@ let test#strategy = {
 \ }
 
 function! DockerTransform(cmd) abort
-    return 'docker-compose exec fpm php ' . a:cmd
+    return 'docker-compose exec fpm php -d memory_limit=-1 ' . a:cmd
 endfunction
 
 function! PHP73Transform(cmd) abort
