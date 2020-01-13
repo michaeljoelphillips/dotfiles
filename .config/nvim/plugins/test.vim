@@ -31,8 +31,6 @@ let g:test#custom_transformations = {
 	\ 'php-local': function('PHPLocal'),
 \ }
 
-let g:test#transformation = 'docker'
-
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
