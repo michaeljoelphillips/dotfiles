@@ -25,8 +25,8 @@ dimensions:
 # Units are physical pixels; this is not DPI aware.
 # (change requires restart)
 padding:
-  x: 0
-  y: 0
+  x: 10
+  y: 10
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -36,12 +36,6 @@ scrolling:
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
   multiplier: 3
-
-  # Scroll to the bottom when new text is written to the terminal.
-  auto_scroll: false
-
-# Display tabs using this many cells (changes require restart)
-tabspaces: 8
 
 # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: true
@@ -112,60 +106,76 @@ debug.render_timer: false
 # and cursor.background colors, otherwise invert the colors of the cursor.
 custom_cursor_colors: true
 
-# Colors (Tomorrow Night Bright)
-colors:
-  # Default colors
-  primary:
-    background: '0x2c2c2c'
-    foreground: '0xd9d9d9'
+schemes:
+  revan_new: &revan
+    primary:
+      background: '0x2c2c2c'
+      foreground: '0xd9d9d9'
 
-  # Colors the cursor will use if `custom_cursor_colors` is true
-  cursor:
-    text: '0x1b1b1b'
-    cursor: '0xd9d9d9'
+    cursor:
+      text: '0x1b1b1b'
+      cursor: '0xd9d9d9'
 
-  # Normal colors
-  normal:
-    black:   '0x2c2c2c'
-    red:     '0xff6e01'
-    green:   '0x95539d'
-    yellow:  '0xe5ad58'
-    blue:    '0x5860a9'
-    magenta: '0x7f5fb2'
-    cyan:    '0x6673a3'
-    white:   '0xc0cbdd'
+    normal:
+      black:   '0x2c2c2c'
+      red:     '0xa2344d'
+      green:   '0x8287e2'
+      yellow:  '0xe5ad58'
+      blue:    '0x5860a9'
+      magenta: '0x7f5fb2'
+      cyan:    '0x6673a3'
+      white:   '0xc0cbdd'
 
-  # Bright colors
-  bright:
-    black:   '0x2c2c2c'
-    red:     '0xff6e01'
-    green:   '0x95539d'
-    yellow:  '0xe5ad58'
-    blue:    '0x5860a9'
-    magenta: '0x7f5fb2'
-    cyan:    '0x6673a3'
-    white:   '0xc0cbdd'
+    bright:
+      black:   '0x2c2c2c'
+      red:     '0xa2344d'
+      green:   '0x8287e2'
+      yellow:  '0xe5ad58'
+      blue:    '0x5860a9'
+      magenta: '0x7f5fb2'
+      cyan:    '0x6673a3'
+      white:   '0xc0cbdd'
 
-  # Dim colors (Optional)
-  dim:
-    black:   '0x2c2c2c'
-    red:     '0xff6e01'
-    green:   '0x95539d'
-    yellow:  '0xe5ad58'
-    blue:    '0x5860a9'
-    magenta: '0x7f5fb2'
-    cyan:    '0x6673a3'
-    white:   '0xc0cbdd'
+  revan_old: &revan_old
+    primary:
+      background: '0x2c2c2c'
+      foreground: '0xd9d9d9'
 
-  # Indexed Colors
-  #
-  # The indexed colors include all colors from 16 to 256.
-  # When these are not set, they're filled with sensible defaults.
-  #
-  # Example:
-  #   `- { index: 16, color: '0xff00ff' }`
-  #
-  indexed_colors: []
+    cursor:
+      text: '0x1b1b1b'
+      cursor: '0xd9d9d9'
+
+    normal:
+      black:   '0x2c2c2c'
+      red:     '0xff6e01'
+      green:   '0x95539d'
+      yellow:  '0xe5ad58'
+      blue:    '0x5860a9'
+      magenta: '0x7f5fb2'
+      cyan:    '0x6673a3'
+      white:   '0xc0cbdd'
+
+    bright:
+      black:   '0x2c2c2c'
+      red:     '0xff6e01'
+      green:   '0x95539d'
+      yellow:  '0xe5ad58'
+      blue:    '0x5860a9'
+      magenta: '0x7f5fb2'
+      cyan:    '0x6673a3'
+      white:   '0xc0cbdd'
+
+    dim:
+      black:   '0x2c2c2c'
+      red:     '0xff6e01'
+      green:   '0x95539d'
+      yellow:  '0xe5ad58'
+      blue:    '0x5860a9'
+      magenta: '0x7f5fb2'
+      cyan:    '0x6673a3'
+      white:   '0xc0cbdd'
+
+colors: *revan
 
 # Visual Bell
 #
