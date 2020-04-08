@@ -118,8 +118,8 @@ schemes:
 
     normal:
       black:   '0x2c2c2c'
-      red:     '0xa2344d'
-      green:   '0x8287e2'
+      red:     '0xa34368'
+      green:   '0x8698e1'
       yellow:  '0xe5ad58'
       blue:    '0x5860a9'
       magenta: '0x7f5fb2'
@@ -127,13 +127,13 @@ schemes:
       white:   '0xc0cbdd'
 
     bright:
-      black:   '0x2c2c2c'
-      red:     '0xa2344d'
-      green:   '0x8287e2'
-      yellow:  '0xe5ad58'
-      blue:    '0x5860a9'
-      magenta: '0x7f5fb2'
-      cyan:    '0x6673a3'
+      black:   '0x6e6e6e'
+      red:     '0xba063b'
+      green:   '0x8da6f2'
+      yellow:  '0xf6b007'
+      blue:    '0x3a407e'
+      magenta: '0xaf65bb'
+      cyan:    '0x8c8ddf'
       white:   '0xc0cbdd'
 
   revan_old: &revan_old
