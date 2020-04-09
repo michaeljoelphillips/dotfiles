@@ -118,7 +118,7 @@ schemes:
 
     normal:
       black:   '0x2c2c2c'
-      red:     '0xa34368'
+      red:     '0xdf5e6c'
       green:   '0x8698e1'
       yellow:  '0xe5ad58'
       blue:    '0x5860a9'
@@ -128,11 +128,11 @@ schemes:
 
     bright:
       black:   '0x6e6e6e'
-      red:     '0xba063b'
+      red:     '0xdf5e6c'
       green:   '0x8da6f2'
       yellow:  '0xf6b007'
       blue:    '0x3a407e'
-      magenta: '0xaf65bb'
+      magenta: '0xa285d0'
       cyan:    '0x8c8ddf'
       white:   '0xc0cbdd'
 
