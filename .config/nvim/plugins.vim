@@ -53,5 +53,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'justinmk/vim-dirvish'
 Plug 'neovim/nvim-lsp'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'lifepillar/vim-colortemplate'
+Plug 'StanAngeloff/php.vim'
 
 call plug#end()
