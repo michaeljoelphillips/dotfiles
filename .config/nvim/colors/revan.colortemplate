@@ -97,7 +97,7 @@ WarningMsg           white             black
 WildMenu             white             black
 Comment              brightblack       none              italic
 Constant             magenta           none              bold
-Error                black             red underline
+Error                red               black
 Identifier           green             none
 Ignore               brightblack       none
 PreProc              yellow            black
@@ -119,3 +119,6 @@ phpComparison        white             black
 phpParent            white             black
 phpVarSelector       white             black
 phpOperator          white             black
+GitGutterAdd         blue              black             bold
+GitGutterChange      magenta           black             bold
+GitGutterDelete      red               black             bold
