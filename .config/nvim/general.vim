@@ -16,7 +16,7 @@ set noshowmode
 set exrc
 let mapleader = ','
 syntax on
-colorscheme OceanicNext
+colorscheme revan
 inoremap jj <ESC>
 inoremap JJ <ESC>
 noremap <C-h> <C-w>h
