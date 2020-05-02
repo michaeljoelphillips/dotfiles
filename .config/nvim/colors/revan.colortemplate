@@ -61,7 +61,7 @@ DiffAdd              green             dimblack
 DiffChange           magenta           dimblack
 DiffDelete           red               dimblack
 DiffText             brightcyan        dimblack          bold
-Directory            white             black
+Directory            green             black
 EndOfBuffer          brightblack       black
 ErrorMsg             red               black             reverse
 FoldColumn           white             black
@@ -69,7 +69,7 @@ Folded               brightblack       dimblack          italic
 IncSearch            white             black             t=reverse g=standout
 LineNr               brightblack       black
 MatchParen           omit              brightblack
-ModeMsg              white             black
+ModeMsg              magenta           black
 MoreMsg              white             black
 NonText              white             black
 Pmenu                white             dimblack
@@ -78,7 +78,7 @@ PmenuSel             white             blue
 PmenuThumb           white             blue
 Question             white             black
 Search               white             blue
-SignColumn           magenta           yellow
+SignColumn           magenta           black
 SpecialKey           white             black
 SpellBad             omit              omit              underline
 SpellCap             omit              omit              underline
