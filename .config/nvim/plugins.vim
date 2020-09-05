@@ -1,7 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/deoplete-lsp'
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/deoplete-lsp'
 Plug 'w0rp/ale'
 Plug 'joonty/vdebug'
 Plug 'SirVer/ultisnips'
@@ -51,9 +51,17 @@ Plug 'leafgarland/typescript-vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'justinmk/vim-dirvish'
+Plug 'michaeljoelphillips/nvim-lsp', { 'dir': '/home/nomad/Code/nvim-lsp' }
 Plug 'neovim/nvim-lsp'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'baskerville/vim-sxhkdrc'
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
+Plug 'jparise/vim-graphql'
 Plug 'lifepillar/vim-colortemplate'
 Plug 'StanAngeloff/php.vim'
+Plug 'haorenW1025/completion-nvim'
+" Plug 'nvim-treesitter/completion-treesitter'
+Plug 'haorenW1025/floatLf-nvim'
 
 call plug#end()

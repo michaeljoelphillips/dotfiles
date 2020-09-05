@@ -14,11 +14,13 @@ set t_Co=256
 set scl=yes
 set noshowmode
 set exrc
+set maxmempattern=3000
 let mapleader = ','
 syntax on
 colorscheme revan
 inoremap jj <ESC>
 inoremap JJ <ESC>
+nnoremap <C-i> i_<Esc>r
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k

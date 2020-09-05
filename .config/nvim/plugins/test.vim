@@ -1,6 +1,7 @@
 let test#strategy = {
+        \ 'file': 'dispatch_background',
         \ 'nearest': 'basic',
-        \ 'file': 'basic',
+        \ 'suite': 'dispatch',
 \ }
 
 function! DockerTransform(cmd) abort
@@ -19,6 +20,10 @@ function! PHP71Transform(cmd) abort
     return 'docker run --rm -it -v `pwd`:/app -w /app php:7.1 ' . a:cmd
 endfunction
 
+function! PHP56Transform(cmd) abort
+    return 'docker run --rm -it -v `pwd`:/app -w /app php:5.6 ' . a:cmd
+endfunction
+
 function! PHPLocal(cmd) abort
     return 'php ' . a:cmd
 endfunction
@@ -28,6 +33,7 @@ let g:test#custom_transformations = {
 	\ 'php73': function('PHP73Transform'),
 	\ 'php72': function('PHP72Transform'),
 	\ 'php71': function('PHP71Transform'),
+	\ 'php56': function('PHP56Transform'),
 	\ 'php-local': function('PHPLocal'),
 \ }
 

@@ -1,5 +1,7 @@
+let g:ale_disable_lsp = 1
+
 let g:ale_fixers = {
-\   'php': ['php_cs_fixer'],
+\   'php': ['phpcbf'],
 \   'go': ['gofmt'],
 \   'kotlin': ['ktlint'],
 \   'javascript': ['prettier'],
@@ -7,9 +9,9 @@ let g:ale_fixers = {
 \   'vue': ['prettier'],
 \   'html': ['prettier'],
 \   'java': ['google_java_format'],
+\   'rust': ['rustfmt'],
 \}
 
-let g:ale_php_phpcs_standard = 'PSR2'
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 1
 let g:ale_lint_on_save = 1
