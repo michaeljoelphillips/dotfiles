@@ -14,7 +14,7 @@ sxhkd &
 dunst &
 compton -b
 polybar top &
-xautolock -time 5 -locker "gllock" -killtime 10 -killer "xset dpms force off" &
+xidlehook --timer 300 gllock "" --timer 60 "xset dpms force off" "" --socket /tmp/xidlehook &
 sleep 2s && .bin/twitch-window-manager &
 dapper -v -e /home/nomad/.config/autostart
 

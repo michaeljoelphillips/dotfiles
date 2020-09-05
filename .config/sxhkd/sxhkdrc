@@ -99,7 +99,7 @@ alt + {_,shift}w
 
 # Lock Desktop
 Pause
-	xautolock -locknow
+	xidlehook-client --socket /tmp/xidlehook control --action trigger --timer 0
 
 # Suspend Desktop
 shift + Pause
