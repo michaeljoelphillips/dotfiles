@@ -1,6 +1,9 @@
 # Node Focus
-alt + {_,shift} + {h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
+alt + {h,j,k,l}
+	bspc node -f {west,south,north,east}
+
+alt + shift + {h,j,k,l}
+	bspc node -s {west,south,north,east} --follow
 
 # Switch Desktop
 ctrl + alt + {l,h}
@@ -47,8 +50,8 @@ alt + grave
 	bspc monitor -f next
 
 # Focus or Send To Desktop
-alt + {_,shift +}{1-2}
-	bspc {desktop -f, node -d} '^{1-2}'
+alt + {_,shift +}{1-5}
+	bspc {desktop -f, node -d} '^{1-5}'
 
 # Resize Node Inward
 alt + {+,-,k,l}
@@ -106,13 +109,13 @@ shift + Pause
 	systemctl suspend
 
 alt + s
-	escrotum -s -e ~/Code/scatter-shot/clipboard.sh /tmp/screenshot
+	~/Code/scatter-shot/clipboard.sh
 
 alt + shift + s
 	escrotum -sC
 
 alt + Escape
-	pkill -USR1 -x sxhkd
+	pkill -USR1 -x sxhkd; pkill -USR1 -x polybar
 
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
