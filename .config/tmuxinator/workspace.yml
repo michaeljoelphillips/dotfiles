@@ -8,7 +8,7 @@ windows:
       layout: main-vertical
       panes:
         - weechat
-        - gotop
+        - gotop -l minimal
         -
   - code:
       panes:
