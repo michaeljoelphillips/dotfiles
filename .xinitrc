@@ -1,5 +1,7 @@
 #!/bin/bash
 
+PATH=$PATH:/home/nomad/.bin
+
 # Set the background
 feh --bg-fill /home/nomad/Pictures/background.jpg &
 
@@ -12,7 +14,7 @@ xsetroot -cursor_name left_ptr
 # Start desktop services
 sxhkd &
 dunst &
-compton -b
+picom -b
 polybar top &
 xidlehook --timer 300 gllock "" --timer 60 "xset dpms force off" "" --socket /tmp/xidlehook &
 sleep 2s && .bin/twitch-window-manager &
