@@ -31,7 +31,7 @@ padding:
 scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
-  history: 10000
+  history: 0
 
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
@@ -260,7 +260,7 @@ selection:
 # Allow terminal applications to change Alacritty's window title.
 window.dynamic_title: true
 
-hide_cursor_when_typing: false
+hide_cursor_when_typing: true
 
 # Live config reload (changes require restart)
 live_config_reload: true
