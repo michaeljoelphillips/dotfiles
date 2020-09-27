@@ -109,7 +109,7 @@ shift + Pause
 	systemctl suspend
 
 alt + s
-	~/Code/scatter-shot/clipboard.sh
+	~/.bin/scatter-shot
 
 alt + shift + s
 	escrotum -sC
