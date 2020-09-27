@@ -37,7 +37,8 @@ module-margin-left = 2
 module-margin-right = 0
 
 font-0 = Hack-Bold:size=9.5:antialias=true;1
-font-1 = FontAwesome:size=12:antialias=true;1
+font-1 = Font Awesome 5 Brands:style=Regular:size=12:antialias=true;1
+font-2 = FontAwesome:size=12:style=Regular:antialias=true;1
 
 modules-left = bspwm
 modules-center = title
@@ -54,6 +55,8 @@ wm-restack = bspwm
 
 [module/bspwm]
 type = internal/bspwm
+
+pin-workspaces = false
 
 label-focused = %icon%
 label-focused-background = ${colors.background-alt}
@@ -73,7 +76,8 @@ label-empty-padding = 1
 
 ws-icon-0 = Web;
 ws-icon-1 = Games;
-ws-icon-2 = Misc;
+ws-icon-2 = Apps;
+ws-icon-3 = Term;
 
 [module/title]
 type = internal/xwindow
