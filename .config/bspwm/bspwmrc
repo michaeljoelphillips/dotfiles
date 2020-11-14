@@ -8,7 +8,7 @@ bspc config pointer_action3 resize_corner
 
 # Monitor Configuration
 bspc monitor 0x00C00002 -d Web Games Apps
-bspc monitor 0x00C00004 -d Term Misc
+# bspc monitor 0x00C00004 -d Term Misc
 
 # Border Colors
 bspc config normal_border_color '#000000'
@@ -36,4 +36,4 @@ bspc rule -a "dolphin-emu:Dolphin" desktop='^2' follow=off state=floating hidden
 bspc rule -a "dolphin-emu:Faster Melee - Slippi (2.1.1)" desktop='^2' follow=on state=fullscreen
 bspc rule -a steam_proton desktop='^2' follow=off state=floating
 bspc rule -a calibre-ebook-viewer desktop='^3' follow=on state=floating
-bspc rule -a Alacritty locked=on border=off follow=on
+bspc rule -a Alacritty border=off follow=on
