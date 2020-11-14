@@ -20,15 +20,16 @@ syntax on
 colorscheme revan
 inoremap jj <ESC>
 inoremap JJ <ESC>
-nnoremap <C-i> i_<Esc>r
+
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <silent> <leader>V :source ~/.config/nvim/init.vim<CR>:source .nvimrc<CR>:filetype detect<CR>
-noremap <leader>C :tabedit $MYVIMRC<CR>
+noremap <leader>C :FZF ~/.config/nvim<CR>
 nmap <leader>/ :noh<CR>
 nmap <leader>s :%s/\s\+$//e<CR>
+
 autocmd FileType todo setlocal spell
 autocmd FileType text setlocal spell
 autocmd FileType mail setlocal spell
