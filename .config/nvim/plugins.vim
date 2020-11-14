@@ -63,5 +63,7 @@ Plug 'StanAngeloff/php.vim'
 Plug 'haorenW1025/completion-nvim'
 " Plug 'nvim-treesitter/completion-treesitter'
 Plug 'haorenW1025/floatLf-nvim'
+Plug 'vimwiki/vimwiki'
+Plug 'tmsvg/pear-tree'
 
 call plug#end()
