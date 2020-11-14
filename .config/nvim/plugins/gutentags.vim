@@ -3,6 +3,7 @@ let g:gutentags_ctags_exclude = [
 \    'cache',
 \    'legacy',
 \    '__CG__*',
+\    'vendor/bin',
 \    'node_modules',
 \    'web',
 \    '*.js',
@@ -15,4 +16,4 @@ let g:gutentags_ctags_exclude = [
 \    '*.properties',
 \]
 
-let g:gutentags_ctags_extra_args = ['--kinds-php=-a']
+let g:gutentags_ctags_extra_args = ['--kinds-php=+f-alnvd']
