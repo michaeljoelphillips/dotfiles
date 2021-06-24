@@ -42,7 +42,7 @@ font-2 = FontAwesome:size=12:style=Regular:antialias=true;1
 
 modules-left = bspwm
 modules-center = title
-modules-right = volume cpu date
+modules-right = pomo volume cpu date
 
 tray-position = right
 tray-padding = 2
@@ -127,5 +127,12 @@ type = internal/pulseaudio
 format-volume = <label-volume> 
 interval = 5
 label-muted = 0% 
+
+[module/pomo]
+type = custom/script
+interval = 1
+exec = pomo status
+exec-if = pgrep -x pomo
+format-underline = #E5AD58
 
 ; vim:ft=dosini
