@@ -39,11 +39,11 @@ alias ip='ip -o -c'
 alias ls='ls --color=auto'
 alias ll='ls -Fl --color=auto'
 alias lla="ls -aFl --color=auto"
+alias news="alacritty --config-file ~/.config/alacritty/news.yml -e newsboat"
 alias tmux="tmux -f ~/.config/tmux.conf"
-alias jediacademymp="~/.steam/steam/steamapps/common/Jedi\ Academy/GameData/openjk.x86_64"
-alias jediacademysp="~/.steam/steam/steamapps/common/Jedi\ Academy/GameData/openjk_sp.x86_64"
 alias borderlands="LD_LIBRARY_PATH=~/.steam/bin32/ cd ~/.steam/steam/steamapps/common/Borderlands\ 2 && ~/.steam/bin32/steam-runtime/run.sh ./Borderlands2"
 alias fetch-nookbooks="adb pull /data/data/bn.ereader/files/B\&N\ Downloads/Books ~/Documents/NookBooks/"
+alias disk-usage="du -hx -t 1G ~"
 
 # Infrequent Commands
 # gpick - On-screen color picker
