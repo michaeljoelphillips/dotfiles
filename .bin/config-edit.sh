@@ -2,6 +2,8 @@
 # A helper command for editing desktop configuration.
 
 case $1 in
+	alacritty)
+		CONFIG_FILE=~/.config/alacritty/alacritty.yml
 	sxhkd)
 		CONFIG_FILE=~/.config/sxhkd/sxhkdrc
 		;;
