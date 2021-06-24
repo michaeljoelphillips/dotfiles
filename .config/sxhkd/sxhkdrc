@@ -88,6 +88,10 @@ alt + p
 # alt + s
 # 	bspc node -g sticky
 
+# Lock the selected window
+alt + shift + grave
+	bspc node -g locked
+
 # Move a Floating Node
 ctrl + alt + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
