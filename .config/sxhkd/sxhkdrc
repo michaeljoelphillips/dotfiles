@@ -116,10 +116,10 @@ alt + s
 	~/.bin/scatter-shot
 
 alt + shift + s
-	escrotum -sC
+	maim -su | xclip -selection clipboard -t image/png
 
 alt + Escape
-	pkill -USR1 -x sxhkd; pkill -USR1 -x polybar
+	pkill -USR1 -x polybar
 
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
