@@ -20,6 +20,8 @@ syntax on
 colorscheme revan
 inoremap jj <ESC>
 inoremap JJ <ESC>
+inoremap jJ <ESC>
+inoremap jJ <ESC>
 
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
