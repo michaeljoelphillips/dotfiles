@@ -37,3 +37,5 @@ bspc rule -a "dolphin-emu:Faster Melee - Slippi (2.1.1)" desktop='^2' follow=on 
 bspc rule -a steam_proton desktop='^2' follow=off state=floating
 bspc rule -a calibre-ebook-viewer desktop='^3' follow=on state=floating
 bspc rule -a Alacritty border=off follow=on
+bspc rule -a "bg3.exe" locked=on
+bspc rule -a News follow=on monitor='0x00C00002' state=pseudo_tiled private=on rectangle=1200x1080+0+0
