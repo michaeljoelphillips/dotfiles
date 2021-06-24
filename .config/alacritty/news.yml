@@ -1,0 +1,18 @@
+import:
+  - ~/.config/alacritty/alacritty.yml
+
+dimensions:
+  columns: 80
+  lines: 200
+
+font:
+  size: 15
+
+window:
+  padding:
+    x: 15
+    y: 15
+
+  class:
+    general: News
+    instance: News
