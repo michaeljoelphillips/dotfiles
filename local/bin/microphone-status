@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+STATUS=`pactl get-source-mute alsa_input.usb-046d_Logitech_StreamCam_8D798965-02.analog-stereo | awk '{print $2}'`
+
+if [ $STATUS == "yes" ]; then
+	echo ""
+
+	exit
+fi
+
+echo ""

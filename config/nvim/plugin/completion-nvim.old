@@ -1,0 +1,88 @@
+lua << EOF
+return 1
+
+local lspconfig = require 'lspconfig'
+local configs = require 'lspconfig/configs'
+local util = require 'lspconfig/util'
+local lsp = vim.lsp
+
+local completion_handler = require 'completion'.on_attach
+
+configs.phpactor = {
+  default_config = {
+    cmd = {"php", "-d", "memory_limit=512M", "~/Code/phpactor/bin/phpactor", "language-server"};
+    filetypes = {"php"};
+    root_dir = util.root_pattern("composer.lock", ".git");
+    log_level = lsp.protocol.MessageType.Warning;
+    settings = {};
+  };
+}
+
+configs.phpls = {
+  default_config = {
+    cmd = {"php7", "-d", "memory_limit=512M", "/usr/local/bin/phpls"};
+    filetypes = {"php"};
+    root_dir = util.root_pattern("composer.lock", ".git");
+    log_level = lsp.protocol.MessageType.Warning;
+    settings = {};
+  };
+}
+
+configs.phplsdebug = {
+  default_config = {
+    cmd = {"/home/nomad/Code/phpls/bin/wrapper.sh"};
+    filetypes = {"php"};
+    root_dir = util.root_pattern("composer.lock", ".git");
+    log_level = lsp.protocol.MessageType.Warning;
+    settings = {};
+  };
+}
+
+configs.arduino = {
+  default_config = {
+    cmd = {"arduino-language-server", "-log", "-logpath", "/tmp"};
+    filetypes = {"cpp", "arduino"};
+    root_dir = util.root_pattern("sketch.json");
+  }
+}
+
+lspconfig.sumneko_lua.setup{
+    on_attach = completion_handler;
+    cmd = {"/usr/bin/lua-language-server"};
+}
+
+lspconfig.jsonls.setup{
+    on_attach = completion_handler;
+}
+
+lspconfig.rls.setup{
+    on_attach = completion_handler;
+}
+
+lspconfig.gopls.setup{
+    on_attach = completion_handler;
+}
+
+lspconfig.phpls.setup{
+    on_attach = completion_handler;
+}
+
+lspconfig.clangd.setup{
+    on_attach = completion_handler;
+}
+
+lspconfig.arduino.setup{
+    on_attach = completion_handler;
+}
+
+lspconfig.tsserver.setup{
+    on_attach = completion_handler;
+}
+EOF
+
+let g:completion_confirm_key = "\<C-y>"
+let g:completion_timer_cycle = 100
+let g:completion_trigger_on_delete = 1
+let g:completion_enable_auto_signature = 1
+let g:completion_trigger_keyword_length = 3
+let g:completion_matching_strategy_list = ['substring']

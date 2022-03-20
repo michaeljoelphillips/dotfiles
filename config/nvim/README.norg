@@ -1,0 +1,36 @@
+@document.meta
+    title: README
+    description: 
+    authors: nomad
+    categories: 
+    created: 2022-01-29
+    version: 0.0.9
+@end
+
+* Ideas and Enhancements
+
+ ** Customize `formatprg` and `equalprg` by file type
+
+    Set `formatprg` and `equalprg` to a lint tool such as `eslint`.  This can be done by filetype, making it a suitable option for streamlining code linting.
+
+ ** LSP Command Remaps
+
+    Remap some LSP commands from `<leader>x` to `gx`.  The main purpose for this is to free up `<leader>` commands for other things.
+
+ ** LSP Code Actions and Diagnostics Configuration
+
+	Available code actions could be more obvious, eg when the `eslint` language server is giving errors/warnings.
+
+	It might also be a good idea to toggle or disable some of `eslint`'s output.  It often creates more noise than good.
+
+	Another improvement would be to search through the location list by the cursor position.  The `loclist` is more preferable for reading diagnostics than the diagnostic floating window.
+
+ ** Quickfix windows need word wrap by default
+
+ ** Commit nvim configuration
+
+ ** Refactor configuration to Lua
+
+ ** Norg filetype indent settings
+
+ ** Swap Colortemplate for Color Buddy

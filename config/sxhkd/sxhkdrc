@@ -1,0 +1,150 @@
+# Node Focus
+alt + {h,j,k,l}
+	bspc node -f {west,south,north,east}
+
+alt + shift + {h,j,k,l}
+	bspc node -s {west,south,north,east} --follow
+
+# Switch Desktop
+ctrl + alt + {l,h}
+	bspc desktop -f {next,prev}.local
+
+# Preselect Node
+ctrl + alt + shift + {h,j,k,l}
+	bspc node -p ~{west,south,north,east}
+
+# Set pre-select split ratios
+ctrl + shift + alt + {1-9}
+	bspc node -o 0.{1-9}
+
+# Set node split ratios
+ctrl + shift + {1-9}
+	bspc node @/ -r 0.{1-9}
+
+# Move the current node to the newest preselected node
+alt + m
+	bspc node -n newest.!automatic.local
+
+# Focus next floating window
+alt + n
+	bspc node -f next.local.floating
+
+# Move the node to the next/previous monitor
+ctrl + alt + {n,p}
+	bspc node -m {east, west} --follow
+
+# Flip the tree vertically
+ctrl + alt + f
+	bspc node @/ -F vertical
+
+# Rotate the tree 90 degrees
+ctrl + alt + r
+	bspc node @/ -R 90
+
+# Balance all nodes
+ctrl + alt + e
+	bspc node @/ -B
+
+# Focus the next monitor
+alt + grave
+	bspc monitor -f next
+
+# Focus or Send To Desktop
+alt + {_,shift +}{1-5}
+	bspc {desktop -f, node -d} '^{1-5}'
+
+# Resize Node Inward
+alt + {+,-,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# Resize Node Outward
+super + shift + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# Make the node hidden and move it to the `below` layer
+#
+# This allows fullscreen windows to be hidden without being interrupted by new
+# windows in the tile or focus change to floating windows.
+alt + y
+	bspc node -g hidden
+
+# Unhide and move a previously hidden fullscreen window to the above layer
+alt + shift + y
+	bspc node $(bspc query -N -n .hidden | tail -n1) -g hidden=off -f
+
+alt + f
+	bspc node -t fullscreen
+
+alt + shift + f
+	bspc node -t floating
+
+alt + t
+	bspc node -t tiled
+
+alt + p
+	bspc node -t pseudo_tiled
+
+alt + shift + t
+	bspc node -t pseudo_tiled
+
+# Make a window node sticky
+# alt + s
+# 	bspc node -g sticky
+
+# Lock the selected window
+alt + shift + grave
+	bspc node -g locked
+
+# Move a Floating Node
+ctrl + alt + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# Show Menu
+alt + space
+	rofi -show run
+
+# Close the node
+alt + {_,shift}w
+	bspc node -{c,k}
+
+# Lock Desktop
+Pause
+	toggle-mic-mute
+
+Scroll_Lock
+	toggle-speaker-mute
+
+Print
+	webcam-preview
+	# xidlehook-client --socket /tmp/xidlehook control --action trigger --timer 0
+
+# Suspend Desktop
+shift + Pause
+	systemctl suspend
+
+alt + s
+	scatter-shot
+
+alt + shift + s
+	maim -su | xclip -selection clipboard -t image/png
+
+alt + Escape
+	reload-config
+
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+XF86AudioRaiseVolume
+	pactl set-sink-volume @DEFAULT_SINK@ +2300
+
+XF86AudioLowerVolume
+	pactl set-sink-volume @DEFAULT_SINK@ -2300
+
+XF86AudioPlay
+	playerctl play-pause
+
+XF86AudioNext
+	playerctl next
+
+XF86AudioPrev
+	playerctl previous

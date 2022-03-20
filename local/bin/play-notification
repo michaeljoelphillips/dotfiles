@@ -1,0 +1,15 @@
+#!/bin/sh
+
+`xset -q | grep -q "Monitor is Off"`
+
+MATCH_STATUS=$?
+
+if [ $MATCH_STATUS -eq 0 ]; then
+	exit 0
+fi
+
+if [ -f /tmp/lux-mode ]; then
+	exit 0
+fi
+
+play ~/Documents/Sounds/notification.mp3 &> /dev/null &

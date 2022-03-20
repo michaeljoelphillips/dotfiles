@@ -1,0 +1,10 @@
+[Unit]
+Description=Backblaze Service
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/nomad/.local/bin/backblaze backup
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=Medicine Reminder
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/nomad/.bin/medicine-reminder
+
+[Install]
+WantedBy=default.target

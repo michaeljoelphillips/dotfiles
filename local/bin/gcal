@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# A saner wrapper around the gcalcli program.
+gcalcli agenda --calendar="michael.phillips@circulohealth.com" --military --tsv --details=conference --details=location now \
+	| awk -v FS='\t' -v OFS='\t' '{print $1"\t"$2"-"$4"\t"$7"\t"($6?$6:$8)}' \
+	| tee ~/.cache/gcal/agenda

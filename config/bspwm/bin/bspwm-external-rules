@@ -1,0 +1,25 @@
+#! /bin/sh
+
+wid=$1
+class=$2
+instance=$3
+consequences=$4
+
+if [ "$instance" = "zoom" ]; then
+	echo "$wid $class $instance $consequences" >> /tmp/rules
+	title=$(xtitle "$wid")
+
+	echo $title >> /tmp/rules
+
+	case "$title" in
+		"Zoom Cloud Meetings"|"Zoom")
+			echo "hidden=on"
+			;;
+		"zoom")
+			echo "hidden=on"
+			;;
+		"Zoom Meeting"|*)
+			echo "state=tiled"
+			;;
+	esac
+fi

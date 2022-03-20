@@ -1,0 +1,12 @@
+name: work
+root: ~/
+tmux_options: -f ~/.config/tmux.conf
+windows:
+  - notes:
+      panes:
+        - vim -c "NeorgStart"
+        - neomutt
+  - code:
+      root: ~/.local/src/Circulo
+      panes:
+        - lf

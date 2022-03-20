@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+ARGS="--full-if-older-than 30 --log-file ~/.local/share/backblaze/log"
+GPG_KEY=132F2076D961A2B14D84F75FF424A5B3294C49B1
+REMOTE=b2://0002543004f5f290000000001:K000lBAjdeAM4m8smoyD1OKKaOO6vEs@Home-Leena

@@ -1,0 +1,17 @@
+browser "readable %u | w3m -cols 72 -T text/html"
+html-renderer "elinks -dump -force-html"
+feedlist-title-format     " Feeds (%u unread) "
+articlelist-title-format  " %T (%u unread) "
+itemview-title-format     " %T "
+feedlist-format           " %4i  %n %8u  %t "
+articlelist-format " %4i %f %?T?|%-17T| ?%t "
+highlight article "^(Feed|Title|Author|Link|Date):.*" black default bold
+
+bind-key j down feedlist
+bind-key k up feedlist
+bind-key j next articlelist
+bind-key k prev articlelist
+bind-key J next-feed articlelist
+bind-key K prev-feed articlelist
+bind-key j down article
+bind-key k up article

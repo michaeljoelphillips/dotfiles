@@ -1,0 +1,10 @@
+[Unit]
+Description=Google Calendar Agenda Sync
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/nomad/.local/bin/gcal
+
+[Install]
+WantedBy=default.target

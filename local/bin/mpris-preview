@@ -1,0 +1,8 @@
+#!/bin/env bash
+
+/usr/share/polybar/scripts/player-mpris-tail.py \
+  -f '{icon} {:t40:{artist}:} - {:t40:{title}:}' \
+  --icon-playing="" \
+  --icon-paused="" \
+  --icon-stopped="" \
+  --icon-none=""

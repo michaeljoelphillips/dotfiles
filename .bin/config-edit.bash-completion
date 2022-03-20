@@ -1,3 +1,0 @@
-#!/bin/sh
-
-complete -W "sxhkd bspwm nvim bash newsboat polybar" config-edit

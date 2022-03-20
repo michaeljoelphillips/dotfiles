@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+
+echo -en "\0use-hot-keys\x1ftrue\n"
+
+PASSWORD_STORE=/home/nomad/.password-store
+CACHE_DIRECTORY=/home/nomad/.cache/rofi-repass
+PASSWORD_HISTORY=$CACHE_DIRECTORY/last-password
+
+passwords() {
+	cd $PASSWORD_STORE
+	PASSWORD_LIST=(**/*.gpg)
+
+	if [ -r $PASSWORD_HISTORY ]; then
+		LAST_PASSWORD=`head -n 1 $PASSWORD_HISTORY`
+
+		echo $LAST_PASSWORD
+		printf '%s\n' "${PASSWORD_LIST[@]%.gpg}" | grep -v $LAST_PASSWORD
+
+		exit 0
+	fi
+
+	printf '%s\n' "${PASSWORD_LIST[@]%.gpg}"
+}
+
+repass() {
+	coproc (
+		PASSWORD=`pass "$@" | head -n 1`
+
+		if [ -z $PASSWORD ]; then
+			exit 0
+		fi
+
+		xdotool type --delay 0 --clearmodifiers --file - <<< $PASSWORD
+		xdotool key Enter
+	)
+
+	echo "$2" > $PASSWORD_HISTORY
+}
+
+main() {
+	shopt -s nullglob globstar
+
+	case "$ROFI_RETV" in
+		1)
+			repass show $1
+			;;
+		10)
+			repass otp $1
+			;;
+		*)
+			passwords
+			;;
+	esac
+}
+
+main "$@"

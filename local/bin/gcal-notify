@@ -1,0 +1,27 @@
+#!/bin/env bash
+
+TMP_TIME=`date +%Y-%m-%dT%H:%M`
+CURRENT_TIME=`date +%s -d $TMP_TIME`
+NEXT_MEETING=
+
+NEXT_MEETING=`~/.local/bin/gcal | head -n 1`
+
+IFS=$'\t' MEETING_ARRAY=($NEXT_MEETING)
+
+if [ `date +%Y-%m-%d` != "${MEETING_ARRAY[0]}" ]; then
+	echo "[INFO] No meetings occur today"
+
+	exit 0
+fi
+
+IFS=- read NEXT_MEETING_START_TIME NEXT_MEETING_END_TIME <<< "${MEETING_ARRAY[1]}"
+NEXT_MEETING_TIME=`date -d ${MEETING_ARRAY[0]}T$NEXT_MEETING_START_TIME +%s`
+TIME_DIFFERENCE=$(( $NEXT_MEETING_TIME - $CURRENT_TIME ))
+
+echo "[DEBUG] time-diff: ${TIME_DIFFERENCE}s"
+
+if [ $TIME_DIFFERENCE == 900 ]; then
+	dunstify "${MEETING_ARRAY[2]}" "Meeting starts at ${NEXT_MEETING_START_TIME}" \
+		-u critical \
+		-h string:x-dunst-stack-tag:gcal
+fi

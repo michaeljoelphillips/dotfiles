@@ -1,0 +1,10 @@
+[Unit]
+Description=Meeting Notifications
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/nomad/.local/bin/gcal-notify
+
+[Install]
+WantedBy=default.target

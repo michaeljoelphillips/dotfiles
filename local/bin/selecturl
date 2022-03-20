@@ -1,0 +1,7 @@
+#!/bin/bash
+
+URL=`sed ':a;N;$!ba;s/=\n//g' /dev/stdin | egrep -o "https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)" | fzf`
+
+if [ $URL ]; then
+	firefox "ext+container:name=Circulo&url=$URL"
+fi

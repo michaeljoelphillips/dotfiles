@@ -1,0 +1,81 @@
+call plug#begin('~/.local/share/nvim/plugged')
+
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/deoplete-lsp'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'SirVer/ultisnips'
+" Plug 'StanAngeloff/php.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'altercation/vim-colors-solarized'
+Plug 'arcticicestudio/nord-vim'
+Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
+Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
+Plug 'baskerville/vim-sxhkdrc'
+Plug 'brooth/far.vim'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'haorenW1025/completion-nvim'
+Plug 'haorenW1025/floatLf-nvim'
+Plug 'janko-m/vim-test'
+Plug 'joonty/vdebug'
+Plug 'jparise/vim-graphql'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/vader.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/vim-journal'
+Plug 'junegunn/vim-peekaboo'
+Plug 'justinmk/vim-dirvish'
+Plug 'justinmk/vim-sneak'
+Plug 'jwalton512/vim-blade'
+Plug 'leafgarland/typescript-vim'
+Plug 'lifepillar/vim-colortemplate'
+Plug 'lifepillar/vim-solarized8'
+Plug 'liuchengxu/vista.vim'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'lumiliet/vim-twig', { 'for': 'html.twig' }
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
+Plug 'mhartington/oceanic-next'
+Plug 'michaeljoelphillips/nvim-lsp', { 'dir': '/home/nomad/Code/nvim-lsp' }
+Plug 'mikelue/vim-maven-plugin', { 'for': 'java' }
+Plug 'mxw/vim-jsx'
+Plug 'neovim/nvim-lsp'
+Plug 'noahfrederick/vim-composer', { 'for': 'php' }
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/completion-treesitter'
+Plug 'nvim-treesitter/playground'
+Plug 'posva/vim-vue', { 'for': 'vue' }
+Plug 'ruanyl/vim-gh-line'
+Plug 'semanser/vim-outdated-plugins'
+Plug 'sodapopcan/vim-twiggy'
+Plug 'tmsvg/pear-tree'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-dadbod'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-dotenv'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-jdaddy'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-vinegar'
+Plug 'udalov/kotlin-vim', { 'for': 'kotlin' }
+" Plug 'vim-php/tagbar-phpctags.vim', { 'for': 'php' }
+Plug 'vimwiki/vimwiki'
+Plug 'w0rp/ale'
+Plug 'preservim/tagbar'
+
+Plug 'tami5/sql.nvim'
+
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-frecency.nvim'
+" Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+
+call plug#end()

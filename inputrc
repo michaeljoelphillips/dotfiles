@@ -1,0 +1,10 @@
+set colored-stats On
+set completion-ignore-case On
+set completion-prefix-display-length 3
+set editing-mode vi
+set keymap vi-insert
+set mark-symlinked-directories On
+set show-all-if-ambiguous On
+set show-all-if-unmodified On
+set show-mode-in-prompt on
+set visible-stats On

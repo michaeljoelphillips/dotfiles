@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+WAS_RUNNING=0
+
+# If newsboat is running, attempt to kill it once
+if [ -f /home/nomad/.local/share/newsboat/cache.db.lock ]; then
+	WAS_RUNNING=1
+	pkill newsboat
+fi
+
+newsboat -x reload
+
+# Restart newsboat if it was previously running
+if [ "$WAS_RUNNING" == "1" ]; then
+	/home/nomad/.bin/news &
+fi

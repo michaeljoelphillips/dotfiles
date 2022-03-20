@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [ `pgrep mplayer` ]; then
+  pkill mplayer
+
+  exit
+fi
+
+mplayer tv://device=/dev/vide

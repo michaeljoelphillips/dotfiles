@@ -1,0 +1,16 @@
+#/bin/env bash
+
+SOURCE=$1
+
+if [ ! -e $SOURCE ]; then
+	exit 1;
+fi
+
+if [ -d $SOURCE ]; then
+	tar cf $SOURCE.tar $SOURCE
+
+	SOURCE=$SOURCE.tar
+fi
+
+gpg --encrypt --recipient michaeljoelphillips@gmail.com $SOURCE
+rm -rf $SOURCE

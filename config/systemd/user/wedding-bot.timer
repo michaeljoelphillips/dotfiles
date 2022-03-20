@@ -1,0 +1,9 @@
+[Unit]
+Description=Run Wedding Bot everyday at 9:30am
+
+[Timer]
+Peristent=false
+OnCalendar=09:30:00
+
+[Install]
+WantedBy=timers.target

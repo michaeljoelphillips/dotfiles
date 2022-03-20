@@ -1,0 +1,9 @@
+[Unit]
+Description=Wedding Bot
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/php /home/nomad/Code/wedding-bot/main.php
+
+[Install]
+WantedBy=default.target

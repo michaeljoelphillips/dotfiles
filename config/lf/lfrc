@@ -1,0 +1,12 @@
+set drawbox
+
+map gc $scatter "$fx"
+
+cmd encrypt ${{
+	gpg --encrypt --recipient michaeljoelphillips@gmail.com "$fx"
+	rm "$fx"
+}}
+
+cmd decrypt ${{
+	gpg --decrypt "$fx" > $fx.decrypted
+}}

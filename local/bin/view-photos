@@ -1,0 +1,15 @@
+#!/bin/env bash
+
+IMAGES=`unzip -l $1 | awk {'print $4'} | grep jpg`
+
+mkdir /tmp/photos
+
+for IMAGE in $IMAGES; do
+	unzip $1 $IMAGE -d /tmp/photos
+
+	sxiv /tmp/photos/$IMAGE
+
+	rm /tmp/photos/$IMAGE
+done
+
+rm -rf /tmp/photos

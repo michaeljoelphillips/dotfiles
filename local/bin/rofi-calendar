@@ -1,0 +1,38 @@
+#!/bin/bash
+
+ENTRIES=`cat ~/.cache/gcal/agenda`
+
+DATE=
+LINE_ITEM=
+OUTPUT_BUFFER=
+
+while read -r ENTRY; do
+	IFS=$'\t'
+	ARRAY=($ENTRY)
+	LINE_ITEM="${ARRAY[1]}  ${ARRAY[2]}"
+
+	# If a meeting was selected, launch it.
+	if [ ! -z "$1" ] && [ "$LINE_ITEM" == "$1" ]; then
+		coproc ( pkill zoom; zoom --url="${ARRAY[3]}" > /dev/null 2>1 )
+		exit 1
+	fi
+
+	# If we roll over to the next day, update the value of `DATE`.
+	if [ "$DATE" != "${ARRAY[0]}" ]; then
+		DATE=${ARRAY[0]}
+
+		OUTPUT_BUFFER+="${DATE}\0icon\x1fview-calendar-week\x1fnonselectable\n"
+	fi
+
+	OUTPUT_BUFFER+="$LINE_ITEM"
+
+	if [ -z ${ARRAY[3]} ]; then
+		OUTPUT_BUFFER+="\0nonselectable\x1ftrue"
+	fi
+
+	OUTPUT_BUFFER+="\n"
+done <<< "$ENTRIES"
+
+echo -ne "$OUTPUT_BUFFER"
+
+exit 0

@@ -1,0 +1,8 @@
+[Unit]
+Description=Refresh Newsboat
+
+[Timer]
+OnCalendar=hourly
+
+[Install]
+WantedBy=timers.target

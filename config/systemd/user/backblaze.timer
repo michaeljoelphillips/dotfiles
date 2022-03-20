@@ -1,0 +1,8 @@
+[Unit]
+Description=Backup with Backblaze once per day
+
+[Timer]
+OnCalendar=daily
+
+[Install]
+WantedBy=timers.target

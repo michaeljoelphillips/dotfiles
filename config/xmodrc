@@ -1,0 +1,9 @@
+keycode 133 = Mode_switch
+keysym h = h H Left
+keysym i = i I Right
+keysym l = l L Right
+keysym j = j J Down
+keysym n = n N Down
+keysym e = e E Up
+keysym k = k K Up
+keysym comma = comma less Escape
