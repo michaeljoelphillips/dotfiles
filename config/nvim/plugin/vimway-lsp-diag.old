@@ -1,4 +1,0 @@
-require('vimway-lsp-diag').init({
-  debounce_ms = 50,
-  buf_clients_only = true,
-})

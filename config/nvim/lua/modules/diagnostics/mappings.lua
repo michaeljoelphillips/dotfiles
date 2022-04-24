@@ -1,2 +1,0 @@
--- vim.api.nvim_set_keymap('n', ']d', [[<Cmd>lua vim.diagnostic.goto_next({ enable_popup = true, popup_opts = { focusable = false, show_header = false }})<CR>]], { noremap = true, silent = true })
--- vim.api.nvim_set_keymap('n', '[d', [[<Cmd>lua vim.diagnostic.goto_prev({ enable_popup = true, popup_opts = { focusable = false, show_header = false }})<CR>]], { noremap = true, silent = true })
