@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CONFIG_DIRECTORY=${XDG_CONFIG_HOME:-~/.config/backblaze}
+CONFIG_DIRECTORY=${XDG_CONFIG_HOME:-~/.config}/backblaze
 FOLDER_LIST=$CONFIG_DIRECTORY/folders
 source $CONFIG_DIRECTORY/config
 
