@@ -27,3 +27,7 @@ end)
 vim.keymap.set('n', '<leader>z', function ()
     require('lib/scratch').new()
 end)
+
+vim.keymap.set('i', '<C-\\>', function ()
+    vim.api.nvim_command('InsertUuid')
+end)
