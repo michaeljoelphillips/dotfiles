@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# A saner wrapper around the gcalcli program.
-gcalcli agenda --calendar="m.phillips@appreciate.it" --military --tsv --details=conference --details=location now \
-	| awk -v FS='\t' -v OFS='\t' '{print $1"\t"$2"-"$4"\t"$7"\t"($6?$6:$8)}' \
-	| tee ~/.cache/gcal/agenda
+{
+	# A saner wrapper around the gcalcli program.
+	gcalcli --config-folder=/home/nomad/.config/gcal/personal agenda --military --tsv --details=conference --details=location now &
+	gcalcli --config-folder=/home/nomad/.config/gcal/jia --calendar='mike@getjia.co' agenda --military --tsv --details=conference --details=location now
+} | awk -v FS='\t' -v OFS='\t' '{print $1"\t"$2"-"$4"\t"$7"\t"($6?$6:$8)}' | sort | tee ~/.cache/gcal/agenda

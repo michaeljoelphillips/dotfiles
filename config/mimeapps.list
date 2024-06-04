@@ -1,0 +1,16 @@
+[Default Applications]
+x-scheme-handler/msteams=teams.desktop
+x-scheme-handler/discord-455712169795780630=discord-455712169795780630.desktop
+text/comma-separated-values=nvim.desktop
+text/csv=libreoffice-nvim.desktop
+text/mathml=nvim.desktop;
+text/plain=nvim.desktop;
+text/rtf=nvim.desktop;
+text/spreadsheet=nvim.desktop;
+text/tab-separated-values=nvim.desktop;
+text/x-comma-separated-values=nvim.desktop;
+text/x-csv=nvim.desktop;
+application/pdf=org.pwmt.zathura-pdf-poppler.desktop;
+
+[Added Associations]
+application/octet-stream=firefox.desktop;libreoffice-writer.desktop;

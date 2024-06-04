@@ -1,0 +1,9 @@
+#!/bin/env bash
+
+if [ ! -z "$1" ]; then
+	coproc(emulator @"$1")
+
+	exit 0
+fi
+
+emulator -list-avds

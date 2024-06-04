@@ -21,7 +21,7 @@ function pull() {
 function push() {
 	FOLDER=$1
 
-	duplicity $FOLDER $REMOTE/$FOLDER --encrypt-key $GPG_KEY $ARGS
+	duplicity incremental $FOLDER $REMOTE/$FOLDER --encrypt-key $GPG_KEY $ARGS
 }
 
 function main() {
