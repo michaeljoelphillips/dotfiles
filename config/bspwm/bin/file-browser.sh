@@ -1,6 +1,6 @@
 #!/bin/sh
 
-TRANSFER_PIPE='/tmp/bspwm_transfer_pipe'
+TRANSFER_PIPE=${XDG_RUNTIME_DIR}/bspwm/file-browser.sock
 FLOAT_WIDTH=640
 FLOAT_HEIGHT=360
 FLOAT_X=1278
@@ -60,7 +60,7 @@ function main() {
 		NODE_CLASS=`json "$NODE_INFO" '.client.className'`
 		NODE_DIMENSIONS=`json "$NODE_INFO" '.client.floatingRectangle'`
 
-		if [[ $NODE_CLASS == '"Vlc"' ]]; then
+		if [[ $NODE_CLASS == '"Browse"' ]]; then
 			case $DST_DESKTOP in
 				0x00C00004)
 					bspc node $SRC_NODE -t tiled

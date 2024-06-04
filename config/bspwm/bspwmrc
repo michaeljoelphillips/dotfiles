@@ -25,23 +25,14 @@ bspc config -m ${MONITORS[0]} top_padding 30
 
 # Application Rules
 bspc rule -a feh state=floating
+bspc rule -a Zathura state=pseudo_tiled
 bspc rule -a vlc state=pseudo_tiled
 bspc rule -a Vlc state=pseudo_tiled
-bspc rule -a Steam desktop='^2' follow=off
-bspc rule -a firefox desktop='^1' follow=on
-bspc rule -a calibre desktop='^3' follow=off
+bspc rule -a steam desktop='^2' follow=off
+bspc rule -a firefox state=pseudo_tiled desktop='^1' follow=on
 bspc rule -a discord desktop='^2' follow=off
-bspc rule -a Blueman-manager follow=on state=floating
 bspc rule -a Pavucontrol desktop='^1' follow=on state=floating
-bspc rule -a "dolphin-emu:Dolphin" desktop='^2' follow=off state=floating hidden
-bspc rule -a "dolphin-emu:Faster Melee - Slippi (2.1.1)" desktop='^2' follow=on state=fullscreen
-bspc rule -a steam_proton desktop='^2' follow=off state=floating
-bspc rule -a calibre-ebook-viewer desktop='^3' follow=on state=floating
-bspc rule -a Alacritty border=off follow=on
-bspc rule -a "bg3.exe" locked=on
-bspc rule -a News follow=on monitor='${MONITORS[0]}' state=pseudo_tiled private=on rectangle=1200x1080+0+0
-bspc rule -a Browse follow=on monitor='${MONITORS[0]}' state=floating private=on rectangle=2000x1250+1000+1000
-bspc rule -a "zoom:zoom" desktop='^2' follow=on state=floating
-bspc rule -a "zoom:Zoom - Free Account" desktop='^2' follow=on state=floating
-bspc rule -a "zoom:Zoom Meeting" desktop='^2' follow=on state=floating
+bspc rule -a Alacritty border=off follow=on desktop='^4'
+bspc rule -a News follow=on monitor=${MONITORS[0]} state=pseudo_tiled private=on rectangle=1200x1080+0+0
+bspc rule -a Browse follow=on state=floating private=on rectangle=1400x800+580+320
 bspc rule -a MPlayer monitor='^1' state=floating private=on border=off follow=on rectangle=800x600+1400+40
