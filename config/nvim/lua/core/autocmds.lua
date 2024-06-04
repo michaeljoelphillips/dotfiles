@@ -8,6 +8,11 @@ vim.api.nvim_create_autocmd({ 'FileType' }, {
     command = 'setlocal bufhidden=delete',
 })
 
+vim.api.nvim_create_autocmd({ 'FileType' }, {
+    pattern = { 'tex' },
+    command = '!zathura "%:r.pdf" &',
+})
+
 vim.api.nvim_create_autocmd({ 'DiagnosticChanged' }, {
     pattern = { '*' },
     callback = function()
