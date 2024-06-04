@@ -26,11 +26,11 @@ repass() {
 	coproc (
 		PASSWORD=`pass "$@" | head -n 1`
 
-		if [ -z $PASSWORD ]; then
+		if [ -z "$PASSWORD" ]; then
 			exit 0
 		fi
 
-		xdotool type --delay 0 --clearmodifiers --file - <<< $PASSWORD
+		xdotool type --delay 10 --clearmodifiers --file - <<< $PASSWORD
 		xdotool key Enter
 	)
 
