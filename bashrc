@@ -16,12 +16,14 @@ alias dot='vim ~/.dotfiles'
 alias cat='bat'
 alias disk-usage="du -hx -t 1G ~"
 alias ip='ip -o -c'
-alias ll='exa -Fl'
-alias lla="exa -aFl --color=auto"
-alias ls='exa'
+alias ll='ls -aFl --color=auto'
+alias lla="ls -aFl --color=auto"
+# alias ls='exa'
 alias news="alacritty --config-file ~/.config/alacritty/news.yml -e newsboat"
 alias tmux="tmux -f ~/.config/tmux.conf"
 alias tree="exa -T"
+alias screenshot="sxiv /tmp/sreenshot.png"
+alias switch-mode="pacmd load-module module-loopback latency_msec=5"
 
 # Always start tmux with correct configuration
 if [[ $DISPLAY && -z "$TMUX" ]]; then
@@ -30,7 +32,7 @@ if [[ $DISPLAY && -z "$TMUX" ]]; then
 
 	if [[ -z "$DETACHED_SESSION" ]]; then
 		if [[ -z "$SESSIONS" ]]; then
-			exec tmuxinator start home
+			exec tmuxp load home
 		else
 			exec tmux new-session
 		fi

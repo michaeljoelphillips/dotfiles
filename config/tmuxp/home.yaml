@@ -1,0 +1,14 @@
+config: ~/.config/tmux.conf
+session_name: home
+start_directory: ~/
+windows:
+- layout: 2604,284x83,0,0{203x83,0,0,0,80x83,204,0[80x27,204,0,2,80x27,204,28,3,80x27,204,56,4]}
+  panes:
+  - weechat
+  - gotop -l minimal
+  - ncspot
+  - pulsemixer
+  window_name: main
+- panes:
+  - null
+  window_name: code
