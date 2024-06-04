@@ -19,9 +19,6 @@ return {
             sources = {
                 { name = 'nvim_lsp' },
                 { name = 'path' },
-                { name = 'treesitter' },
-                { name = 'vsnip' },
-                { name = 'norg' },
             },
         })
     end,

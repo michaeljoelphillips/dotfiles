@@ -4,6 +4,27 @@ vim.keymap.set('n', 'mm', function()
     vim.opt_local.makeprg = 'make'
 end)
 
+vim.keymap.set('i', '<Tab>', function ()
+    if vim.fn['vsnip#expandable']() == 1 then
+        return '<Plug>(vsnip-expand)'
+    end
+
+    return '<Tab>'
+end, { expr = true, remap = true })
+
+vim.keymap.set('i', '<C-n>', function ()
+    if vim.fn['vsnip#jumpable']() == 1 then
+        return '<Plug>(vsnip-jump-next)'
+    end
+
+    return '<C-n>'
+end, { expr = true, remap = true })
+
+
+vim.keymap.set('i', '<C-n>', function ()
+    return vim.fn['vsnip#jumpable'](1) and '<Plug>(vsnip-jump-next)' or '<C-n>'
+end, { expr = true, remap = true })
+
 vim.keymap.set('n', 'ga', '<Plug>(EasyAlign)')
 vim.keymap.set('x', 'ga', '<Plug>(EasyAlign)')
 
@@ -14,7 +35,7 @@ vim.keymap.set('n', '<leader>gp', '<cmd>Gpush<cr>')
 vim.keymap.set('n', '<leader>gs', '<cmd>Git<cr>')
 vim.keymap.set('n', '<leader>gv', '<cmd>Gvsplit<cr>')
 
-vim.keymap.set('i', '<C-y><C-o>', vim.lsp.buf.signature_help, { silent = true })
+-- vim.keymap.set('i', '<C-y><C-o>', vim.lsp.buf.signature_help, { silent = true })
 vim.keymap.set('n', '<leader>u', vim.lsp.buf.code_action, { silent = true })
 vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { silent = true })
 vim.keymap.set('n', 'gH', vim.lsp.buf.signature_help, { silent = true })
@@ -45,7 +66,7 @@ vim.keymap.set('n', '<leader>C', function()
 end)
 
 vim.keymap.set('n', '<leader>F', function()
-    pickers.find_files({ find_command = 'fd --no-ignore' })
+    pickers.lsp_workspace_symbols()
 end)
 
 vim.keymap.set('n', '<leader>S', function()

@@ -2,7 +2,7 @@ vim.g.mapleader = ','
 
 vim.opt.background = 'dark'
 vim.opt.completeopt = 'menu,menuone,noselect'
-vim.opt.exrc = true
+-- vim.opt.exrc = true
 vim.opt.foldenable = false
 vim.opt.foldmethod = 'expr'
 vim.opt.formatoptions:append('j')
@@ -22,6 +22,12 @@ vim.opt.tabstop = 4
 vim.opt.tagfunc = 'v:lua.vim.lsp.tagfunc'
 vim.opt.termguicolors = true
 vim.opt.wrap = false
+vim.opt.mouse = ""
 
 vim.diagnostic.config({ virtual_text = false })
 vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, { border = 'single' })
+
+vim.cmd([[
+  syntax on
+  colorscheme revan
+]])

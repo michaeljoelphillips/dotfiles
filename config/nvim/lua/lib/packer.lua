@@ -13,14 +13,14 @@ M.load = function(plugin)
     return config
 end
 
-M.startup = function(plugins)
-    packer.startup(function(use)
-        for _, plugin in ipairs(plugins) do
+M.startup = function(config)
+    packer.startup(function(use, use_rocks)
+        for _, plugin in ipairs(config.plugins) do
             use(M.load(plugin))
         end
-    end)
 
-    require('plugins.maps')
+        use_rocks(config.rocks)
+    end)
 end
 
 return M

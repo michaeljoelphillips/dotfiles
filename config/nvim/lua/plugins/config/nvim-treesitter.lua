@@ -2,23 +2,23 @@ return {
     'nvim-treesitter/nvim-treesitter',
     config = function()
         local config = require('nvim-treesitter.configs')
-        local parsers = require('nvim-treesitter.parsers').get_parser_configs()
+        -- local parsers = require('nvim-treesitter.parsers').get_parser_configs()
 
-        parsers.norg = {
-            install_info = {
-                url = 'https://github.com/nvim-neorg/tree-sitter-norg',
-                files = { 'src/parser.c', 'src/scanner.cc' },
-                branch = 'main',
-            },
-        }
+--         parsers.norg = {
+--             install_info = {
+--                 url = 'https://github.com/nvim-neorg/tree-sitter-norg',
+--                 files = { 'src/parser.c', 'src/scanner.cc' },
+--                 branch = 'main',
+--             },
+--         }
 
-        parsers.vimdoc = {
-            install_info = {
-                url = 'https://github.com/vigoux/tree-sitter-vimdoc',
-                files = { 'src/parser.c', 'src/scanner.c' },
-                branch = 'master',
-            },
-        }
+--         parsers.vimdoc = {
+--             install_info = {
+--                 url = 'https://github.com/vigoux/tree-sitter-vimdoc',
+--                 files = { 'src/parser.c', 'src/scanner.c' },
+--                 branch = 'master',
+--             },
+--         }
 
         config.setup({
             ensure_installed = {

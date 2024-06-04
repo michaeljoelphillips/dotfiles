@@ -3,14 +3,15 @@ return {
     config = function()
         require('neorg').setup({
             load = {
+                ['core.export'] = {},
                 ['core.defaults'] = {},
-                ['core.norg.concealer'] = {},
-                ['core.norg.completion'] = {
+                ['core.concealer'] = {},
+                ['core.completion'] = {
                     config = {
                         engine = 'nvim-cmp',
                     },
                 },
-                ['core.norg.dirman'] = {
+                ['core.dirman'] = {
                     config = {
                         workspaces = {
                             circulo = '~/Documents/Notes/Circulo',
@@ -20,8 +21,9 @@ return {
                         last_workspace = vim.fn.stdpath('cache') .. '/neorg.last-workspace',
                     },
                 },
-                ['core.norg.qol.toc'] = {},
+                ['core.qol.toc'] = {},
             },
         })
     end,
+    requires = "nvim-lua/plenary.nvim",
 }

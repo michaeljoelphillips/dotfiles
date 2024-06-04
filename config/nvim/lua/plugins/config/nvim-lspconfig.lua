@@ -6,16 +6,18 @@ return {
         utils.configureLangServers({
             'bashls',
             'clangd',
-            'eslint',
             'gopls',
             'graphql',
+            'html',
+            'jsonls',
             'pylsp',
             'pyright',
+            'rust_analyzer',
             'terraformls',
             'tsserver',
         })
 
-        utils.configureLangServers('sumneko_lua', {
+        utils.configureLangServers('lua_ls', {
             settings = {
                 Lua = {
                     runtime = {
