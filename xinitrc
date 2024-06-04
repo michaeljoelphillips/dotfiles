@@ -12,6 +12,9 @@ function services() {
 	polybar top &
 	sxhkd &
 	~/.fehbg &
+	xidlehook --timer 300 lockgl "" --timer 300 "xset dpms force off" "" --socket /tmp/xidlehook &
+	alacritty --option window.class.general=Alacritty --option window.class.instance=Workspace &
+	firefox &
 }
 
 function main() {
