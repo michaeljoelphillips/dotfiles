@@ -103,6 +103,9 @@ ctrl + alt + {Left,Down,Up,Right}
 alt + space
 	rofi -show run
 
+ctrl + alt + space
+	browse
+
 # Close the node
 alt + {_,shift}w
 	bspc node -{c,k}
@@ -112,11 +115,10 @@ Pause
 	toggle-mic-mute
 
 Scroll_Lock
-	toggle-speaker-mute
+	xidlehook-client --socket /tmp/xidlehook control --action trigger --timer 0
 
 Print
 	webcam-preview
-	# xidlehook-client --socket /tmp/xidlehook control --action trigger --timer 0
 
 # Suspend Desktop
 shift + Pause
@@ -126,7 +128,7 @@ alt + s
 	scatter-shot
 
 alt + shift + s
-	maim -su | xclip -selection clipboard -t image/png
+	maim -su | tee /tmp/screenshot.png | xclip -selection clipboard -t image/png
 
 alt + Escape
 	reload-config
