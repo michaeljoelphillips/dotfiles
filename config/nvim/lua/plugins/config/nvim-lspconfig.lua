@@ -57,5 +57,4 @@ return {
             },
         })
     end,
-    requires = { { 'hrsh7th/nvim-cmp' } },
 }
