@@ -15,6 +15,7 @@ return {
             'rust_analyzer',
             'terraformls',
             'tsserver',
+            'phpactor',
         })
 
         utils.configureLangServers('lua_ls', {
