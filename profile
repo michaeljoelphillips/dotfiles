@@ -12,7 +12,7 @@ PATH="${PATH}:${XDG_BIN_HOME}"
 
 eval `dircolors -b ~/.config/ls/colors`
 
-if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+if [[ -z $DISPLAY && $XDG_VTNR -eq 1 && -z $SSH_CONNECTION ]]; then
   exec startx
 fi
 
