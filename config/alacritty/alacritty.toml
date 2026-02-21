@@ -1,39 +1,13 @@
+[general]
 live_config_reload = true
+
+import = [
+	'./themes/revan.toml'
+]
 
 [bell]
 animation = "EaseOutExpo"
 duration = 0
-
-[colors]
-draw_bold_text_with_bright_colors = true
-
-[colors.bright]
-black = "0x6e6e6e"
-blue = "0x3a407e"
-cyan = "0x8c8ddf"
-green = "0x8da6f2"
-magenta = "0xa285d0"
-red = "0xdf5e6c"
-white = "0xc0cbdd"
-yellow = "0xf6b007"
-
-[colors.cursor]
-cursor = "0xd9d9d9"
-text = "0x1b1b1b"
-
-[colors.normal]
-black = "0x2c2c2c"
-blue = "0x5860a9"
-cyan = "0x6673a3"
-green = "0x8698e1"
-magenta = "0x7f5fb2"
-red = "0xdf5e6c"
-white = "0xc0cbdd"
-yellow = "0xe5ad58"
-
-[colors.primary]
-background = "0x2c2c2c"
-foreground = "0xd9d9d9"
 
 [window.dimensions]
 columns = 80
