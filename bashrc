@@ -1,38 +1,38 @@
+echo "[DEBUG] .bashrc Initialization"
+
 # If not running interactively, return
 [[ $- != *i* ]] && return
 
-PS1=' \u@\h \W$(__git_ps1 " (%s)") '
+PS1=' \u@loop \W$(__git_ps1 " (%s)") '
 
-source /usr/local/share/lf/lf.bash
-source /usr/share/fzf/completion.bash
-source /usr/share/fzf/key-bindings.bash
-source /usr/share/git/completion/git-completion.bash
-source /usr/share/git/completion/git-prompt.sh
-source /usr/share/pass/completion/pass.bash-completion
-source /etc/bash_completion.d/pass-otp
+for COMPLETION in "/opt/homebrew/etc/bash_completion.d/"*; do
+	echo "[DEBUG] Sourcing $COMPLETION"
 
-alias clip='xclip -sel clip'
-alias dot='vim ~/.dotfiles'
+	[[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+done
+
 alias cat='bat'
+alias clip='xclip -sel clip'
 alias disk-usage="du -hx -t 1G ~"
+alias dot='vim ~/.dotfiles'
 alias ip='ip -o -c'
 alias ll='ls -aFl --color=auto'
 alias lla="ls -aFl --color=auto"
-# alias ls='exa'
 alias news="alacritty --config-file ~/.config/alacritty/news.yml -e newsboat"
-alias tmux="tmux -f ~/.config/tmux.conf"
-alias tree="exa -T"
+alias vim="nvim"
 alias screenshot="sxiv /tmp/sreenshot.png"
 alias switch-mode="pacmd load-module module-loopback latency_msec=5"
+alias tmux="tmux -f ~/.config/tmux/tmux.conf"
+alias tree="exa -T"
 
 # Always start tmux with correct configuration
-if [[ $DISPLAY && -z "$TMUX" ]]; then
+if [[ -z "$TMUX" ]]; then
 	SESSIONS="$( tmux ls )"
 	DETACHED_SESSION="$( tmux ls | grep -vm1 attached | cut -d: -f1 )"
 
 	if [[ -z "$DETACHED_SESSION" ]]; then
 		if [[ -z "$SESSIONS" ]]; then
-			exec tmuxp load home
+			exec tmuxp load loop
 		else
 			exec tmux new-session
 		fi

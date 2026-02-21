@@ -1,14 +1,12 @@
 return {
     'nvim-neorg/neorg',
-    enabled = false,
-    config = true,
+    enabled = true,
     lazy = false,
     version = "*",
+    config = true,
     dependencies = {
-        "vhyrro/luarocks.nvim",
-        "MunifTanjim/nui.nvim",
-        "nvim-neotest/nvim-nio",
-        "nvim-neorg/lua-utils.nvim",
-        "nvim-lua/plenary.nvim"
+        'nvim-neorg/lua-utils.nvim',
+        'pysan3/pathlib.nvim',
+        'nvim-neotest/nvim-nio',
     },
 }

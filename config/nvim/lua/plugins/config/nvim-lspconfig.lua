@@ -1,9 +1,9 @@
 return {
     'neovim/nvim-lspconfig',
     config = function()
-        local utils = require('lib/lsp')
+        local lsp = require('lib/lsp')
 
-        utils.configureLangServers({
+        lsp.configureLangServers({
             'bashls',
             'clangd',
             'gopls',
@@ -14,11 +14,28 @@ return {
             'pyright',
             'rust_analyzer',
             'terraformls',
-            'tsserver',
             'phpactor',
+            'volar',
         })
 
-        utils.configureLangServers('lua_ls', {
+        lsp.configureLangServers('ts_ls', {
+            init_options = {
+                plugins = {
+                    {
+                        name = "@vue/typescript-plugin",
+                        location = "/Users/michaelphillips/.nvm/versions/node/v20.16.0/lib/node_modules/@vue/typescript-plugin",
+                        languages = {"javascript", "typescript", "vue"},
+                    },
+                },
+            },
+            filetypes = {
+                "javascript",
+                "typescript",
+                "vue",
+            },
+        })
+
+        lsp.configureLangServers('lua_ls', {
             settings = {
                 Lua = {
                     runtime = {
@@ -38,7 +55,7 @@ return {
             },
         })
 
-        utils.configureLangServers('texlab', {
+        lsp.configureLangServers('texlab', {
             settings = {
                 texlab = {
                     build = {

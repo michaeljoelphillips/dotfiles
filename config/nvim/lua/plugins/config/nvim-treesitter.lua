@@ -60,9 +60,6 @@ return {
                     },
                 },
             },
-            autotag = {
-                enable = true,
-            },
         })
 
         vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'

@@ -1,3 +1,6 @@
+echo "[DEBUG] .profile Initialization"
+
+export EDITOR="nvim"
 export GOPATH="$HOME/.local/src/go"
 export MANPAGER="nvim +Man!"
 export PAGER="less -S"
@@ -11,6 +14,7 @@ export XDG_STATE_HOME="$HOME/.local/state"
 PATH="${PATH}:${XDG_BIN_HOME}"
 
 eval `dircolors -b ~/.config/ls/colors`
+eval "$(fzf --bash)"
 
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec startx
