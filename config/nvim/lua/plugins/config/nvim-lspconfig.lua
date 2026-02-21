@@ -1,9 +1,9 @@
 return {
     'neovim/nvim-lspconfig',
     config = function()
-        local utils = require('lib/lsp')
+        local lsp = require('lib/lsp')
 
-        utils.configureLangServers({
+        lsp.configureLangServers({
             'bashls',
             'clangd',
             'gopls',
@@ -18,7 +18,7 @@ return {
             'phpactor',
         })
 
-        utils.configureLangServers('lua_ls', {
+        lsp.configureLangServers('lua_ls', {
             settings = {
                 Lua = {
                     runtime = {
@@ -38,7 +38,7 @@ return {
             },
         })
 
-        utils.configureLangServers('texlab', {
+        lsp.configureLangServers('texlab', {
             settings = {
                 texlab = {
                     build = {

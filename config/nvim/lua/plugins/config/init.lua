@@ -4,7 +4,6 @@ return {
     'chentau/marks.nvim',
     'glacambre/firenvim',
     'hrsh7th/vim-vsnip',
-    'jparise/vim-graphql',
     'junegunn/fzf.vim',
     'junegunn/goyo.vim',
     'junegunn/vim-easy-align',
@@ -33,6 +32,5 @@ return {
     'tpope/vim-rhubarb',
     'tpope/vim-surround',
     'tpope/vim-unimpaired',
-    'tpope/vim-vinegar',
     'rebelot/kanagawa.nvim',
 }

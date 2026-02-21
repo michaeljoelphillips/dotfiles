@@ -1,0 +1,7 @@
+{
+    "fn": {
+        "scope": "javascript,typescript",
+        "prefix": "fn",
+        "body": "const $1 = ($2) => {$0};"
+    }
+}

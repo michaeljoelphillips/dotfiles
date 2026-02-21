@@ -1,4 +1,3 @@
-local lspconfig = require('lspconfig')
 local is_cmp_loaded, cmp = pcall(require('cmp_nvim_lsp'))
 
 local M = {
@@ -21,7 +20,8 @@ M.configureLangServers = function(servers, config)
     config['capabilities'] = M.lsp_client_capabilities
 
     for _, server in ipairs(servers) do
-        lspconfig[server].setup(config)
+        vim.lsp.config(server, config)
+        vim.lsp.enable(server)
     end
 
     return M
